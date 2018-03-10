@@ -1,0 +1,4247 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/jquery.mobile.external-png-1.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.inline-png-1.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.inline-svg-1.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.2.min.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons.min.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/abooji.min.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/slider.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link href="css/media.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/idangerous.swiper.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="cordova.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/iosLabelFix.js"></script>
+    <!--    <link rel="stylesheet" href="css/bliss-slider.css">
+    <script type="text/javascript" src="js/bliss-slider.js"></script>-->
+    <link href="css/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+    
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+    <script type="text/javascript" src="js/idangerous.swiper-2.0.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    
+    <!--<script type="text/javascript" src="phonegap.js"></script>-->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>-->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!--<script type="text/javascript" src="js/mapscript.js"></script>-->
+    <script src="js/slider.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+    <!--    <script type="text/javascript">
+        $(function () {
+            $("#slider").blissSlider({
+                auto: 1,
+                transitionTime: 500,
+                timeBetweenSlides: 4000
+            });
+        });
+    </script>-->
+
+    <title>Abooji</title>
+</head>
+
+<body id="hbody" onload="on_load()">
+    <!-- <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>-->
+    <!--Main Page-->
+    <div data-role="page" id="mainpage">
+
+
+        <div class="content-heading" id="mainheader">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <div style="margin: auto;display: -webkit-inline-box;margin-top: 9px;">Main</div><span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+            </div>
+
+        </div>
+
+        <!--<div data-role="header" data-position="fixed" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <a href="#menu" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+            comment this btn >> <button onclick="$( menuPanel ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>
+
+            <img src="img/logo.png" style="height: 41px;width: 41%;">
+
+            <a href="#search" onclick="$.mobile.changePage('#search')"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+        </div>-->
+
+        <!--<div data-role="header">-->
+        <!-- <button onclick="$( menuPanel ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>-->
+        <!--<img src="img/logo.png" class="ui-btn-icon-left" style="height: 40px;width: 15vw;">-->
+        <!--<h2 role="heading">Main</h2>-->
+        <!--<button onclick="$( menuPanel ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>-->
+        <!-- <a href="#search"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>-->
+        <!-- </div>-->
+
+        <div data-role="header" style="text-align: -webkit-center;">
+            <!--<h1>Advertisements</h1>-->
+            <ul class="bxslider" id="adslider" style="margin-top: 0px;margin-bottom: 0px;">
+                <!-- <li>
+                    <img src="img/ad.png" onclick="$.mobile.changePage('#advertpage');" alt="Picture" style="height: 24vh;width: 100vw;" />
+                </li>
+                <li>
+                    <img src="img/big/1.png" onclick="$.mobile.changePage('#advertpage');" alt="Picture" style="height: 24vh;width: 100vw;" />
+                </li>
+                <li>
+                    <img src="img/big/2.png" onclick="$.mobile.changePage('#advertpage');" alt="Picture" style="height: 24vh;width: 100vw;" />
+                </li>-->
+            </ul>
+            <!--<a href="#advertpage">
+            <img src="img/ad.png" style="height: 24vh;width: 100vw;">
+                </a>-->
+
+        </div>
+
+        <!--<div data-role="header">
+            <h1>Listing</h1>
+        </div>-->
+
+        <div data-role="main" class="ui-content" id="maindata" style="padding-top: 2px;padding-bottom: 2px;">
+            <!--<p>All Listings</p>-->
+            <ul class="bxslider" id="mainslider">
+                <li>
+                    <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" id="loc" style="-webkit-padding-start: 0px;margin: 0px;margin-top: 15px;width: 99vw;">
+
+                        <article>
+                            <div class="select-main-box" id="div_loc">
+                                <!--<div class="select-hading">Today’s Special 1 <span>20</span>
+                                </div>
+                                <div class="special-box">
+                                    <div class="near-me">Near Me</div>
+                                    <div class="near-tex">100</div>
+                                    <div class="near-tex">3</div>
+                                </div>
+                                <div class="special-box">
+                                    <div class="near-me">Home</div>
+                                    <div class="near-tex">3</div>
+                                    <div class="near-tex">2</div>
+                                </div>
+                                <div class="special-box">
+                                    <div class="near-me">Work</div>
+                                    <div class="near-tex">10</div>
+                                    <div class="near-tex">5</div>
+                                </div>
+                                <div class="special-box">
+                                    <div class="near-me">Mums</div>
+                                    <div class="near-tex">5</div>
+                                    <div class="near-tex">1</div>
+                                </div>
+                                <div class="special-box">
+                                    <div class="near-me">Taka</div>
+                                    <div class="near-tex">7</div>
+                                    <div class="near-tex">0</div>
+                                </div>
+                                <div class="scan-btn">
+                                    <a href="#">
+                                        <img src="img/scan-btn.png" />
+                                    </a>
+                                </div>-->
+                            </div>
+                        </article>
+
+                        <!--<li data-role="list-divider" data-theme="a" data-content-theme="a" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child" style="text-align: -webkit-center;">
+                            <a href="#tspecial" class="ui-link" style="color: white;text-decoration-line: inherit;">Today's Special
+                                <span class="ui-li-count ui-body-inherit">20</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html">
+                                <h2>Near Me</h2>
+                                <p class="ui-li-aside">
+                                    <strong>51</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Home</h2>
+                                <p class="ui-li-aside">
+                                    <strong>31</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Work</h2>
+                                <p class="ui-li-aside">
+                                    <strong>91</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Mums</h2>
+                                <p class="ui-li-aside">
+                                    <strong>101</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Taka</h2>
+                                <p class="ui-li-aside">
+                                    <strong>21</strong>
+                                </p>
+                            </a>
+                        </li>-->
+                    </ul>
+                </li>
+                <li style="margin-right: 2px;">
+                    <ul data-role="listview" data-inset="true" id="cat" style="-webkit-padding-start: 0px;margin: 0px;margin-top: 15px;width: 99vw;">
+                        <article>
+                            <div class="select-main-box" id="div_cat">
+                            </div>
+                        </article>
+                        <!--<li data-role="list-divider" data-theme="a" data-content-theme="a" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child" style="text-align: -webkit-center;">
+                            <a href="#tspecial" class="ui-link" style="color: white;text-decoration-line: inherit;">Today's Special
+                                <span class="ui-li-count ui-body-inherit">20</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html">
+                                <h2>Grocery</h2>
+                                <p class="ui-li-aside">
+                                    <strong>5</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Shoes</h2>
+                                <p class="ui-li-aside">
+                                    <strong>3</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Electronics</h2>
+                                <p class="ui-li-aside">
+                                    <strong>11</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Shell</h2>
+                                <p class="ui-li-aside">
+                                    <strong>5</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Petrol</h2>
+                                <p class="ui-li-aside">
+                                    <strong>6</strong>
+                                </p>
+                            </a>
+                        </li>-->
+                    </ul>
+                </li>
+                <li style="margin-right: 2px;">
+                    <ul data-role="listview" data-inset="true" id="card" style="-webkit-padding-start: 0px;margin: 0px;margin-top: 15px;width: 99vw;">
+
+                        <article>
+                            <div class="select-main-box" id="div_card">
+                            </div>
+                        </article>
+                        <!--<li data-role="list-divider" data-theme="a" data-content-theme="a" role="heading" class="ui-li-divider ui-bar-a ui-li-has-count ui-first-child" style="text-align: -webkit-center;">
+                            <a href="#tspecial" class="ui-link" style="color: white;text-decoration-line: inherit;">Today's Special
+                                <span class="ui-li-count ui-body-inherit">20</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html">
+                                <h2>Card B</h2>
+                                <p class="ui-li-aside">
+                                    <strong>101 Offers</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Card A</h2>
+                                <p class="ui-li-aside">
+                                    <strong>99 Offers</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Passion</h2>
+                                <p class="ui-li-aside">
+                                    <strong>501 Offers</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Student</h2>
+                                <p class="ui-li-aside">
+                                    <strong>999 Offers</strong>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <h2>Abooji</h2>
+                                <p class="ui-li-aside">
+                                    <strong>1001 Offers</strong>
+                                </p>
+                            </a>
+                        </li>-->
+                    </ul>
+                </li>
+                <li style="margin-right: 2px;">
+                    <ul data-role="listview" data-inset="true" id="shp_List" style="-webkit-padding-start: 0px;margin: 0px;margin-top: 15px;width: 99vw;">
+                        <article>
+                            <div class="select-main-box" id="div_shp_list">
+                            </div>
+                        </article>
+                    </ul>
+                </li>
+            </ul>
+            <!--<button onclick="create_footer()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-icon-notext"></button>-->
+
+        </div>
+
+
+
+        <!-- <script>
+            $.getJSON('swiplist.json', function(data) {
+                var output = "";
+
+                output = "<li data-role='list-divider' data-theme='a' data-content-theme='a' role='heading' class='ui-li-divider ui-bar-a ui-li-has-count ui-first-child' style='text-align: -webkit-center;'><a href='#tspecial' class='ui-link' style='color: white;text-decoration-line: inherit;'>Today's Special<span class='ui-li-count ui-body-inherit'>20</span></a></li>"
+                for (var i in data.loc) {
+                    output += "<li><a class='ui-btn ui-btn-icon-right ui-icon-carat-r' href='" + data.loc[i].href + "'><h2>" + data.loc[i].name + "</h2><p class='ui-li-aside'><strong>" + data.loc[i].count + "</strong></p></a></li>";
+                }
+
+                $('#loc').append(output);
+
+                //$('#loc').listview(); //<-- here
+
+                output = "";
+                output = "<li data-role='list-divider' data-theme='a' data-content-theme='a' role='heading' class='ui-li-divider ui-bar-a ui-li-has-count ui-first-child' style='text-align: -webkit-center;'><a href='#tspecial' class='ui-link' style='color: white;text-decoration-line: inherit;'>Today's Special<span class='ui-li-count ui-body-inherit'>20</span></a></li>"
+                for (var i in data.cat) {
+                    output += "<li><a class='ui-btn ui-btn-icon-right ui-icon-carat-r'  href='" + data.cat[i].href + "'><h2>" + data.cat[i].name + "</h2><p class='ui-li-aside'><strong>" + data.cat[i].count + "</strong></p></a></li>";
+                }
+                $('#cat').append(output);
+
+
+                output = "";
+                output = "<li data-role='list-divider' data-theme='a' data-content-theme='a' role='heading' class='ui-li-divider ui-bar-a ui-li-has-count ui-first-child' style='text-align: -webkit-center;'><a href='#tspecial' class='ui-link' style='color: white;text-decoration-line: inherit;'>Today's Special<span class='ui-li-count ui-body-inherit'>20</span></a></li>"
+                for (var i in data.card) {
+                    output += "<li><a class='ui-btn ui-btn-icon-right ui-icon-carat-r'  href='" + data.card[i].href + "'><h2>" + data.card[i].name + "</h2><p class='ui-li-aside'><strong>" + data.card[i].count + "</strong></p></a></li>";
+                }
+                $('#card').append(output);
+
+                
+                $("#mainslider").listview();
+                $("#maindata").resize()
+            });
+            /* 
+            console.info("before call adslider");
+            $.getJSON('adslider.json', function(data) {
+                    var output = "";
+                    for (var i in data.ad) {
+                        console.log("in for " + i);
+                        output += "<li><img src='" + data.ad[i].src + "'  onclick='" + data.ad[i].changePage + "' alt='Picture' style='height: 24vh;width: 100vw;' /></li>";
+                    }
+                    console.info("output: "+output);
+                    $('#adslider').append(output);
+                });
+            
+            console.info("after adslider");*/
+        </script>-->
+
+
+
+        <!--
+        <div data-role="footer" style="text-align: -webkit-center;">
+            
+            <img src="img/big/banner.png" style="height: 21vh;width: 100vw;">
+-->
+        <!--width: 75%;-->
+        <!--
+             <div style="background-image:url(img/big/banner.png);background-repeat:no-repeat;background-size:contain">
+                        <a href="#" target="_blank"></a>
+            </div>
+-->
+        <!--</div>-->
+
+
+
+
+
+        <!--
+        <div class="main-screen-out-div">
+            <div class="winter-sale">
+                <img src="img/winter-sale.png" />
+            </div>
+
+        </div>
+-->
+
+
+        <div id="p_listing" data-role="footer">
+
+            <!--<h1>Premium Listing</h1>-->
+            <div id="overflow">
+
+                <div class="inner" data-role="none">
+                    <ul class="bxslider" id="preslider" style="padding: 0 0 0 0px;-webkit-margin-before: 2px;
+-webkit-margin-after: 2px;">
+
+
+
+                        <!--<li>
+                            <ul data-role="listview">
+                                <li>
+                                    <article>
+                                        <div class="select-main-box-pro">
+                                            <div class="premium-h">Premium <span>Listing</span>
+                                            </div>
+                                            <div class="premium-item">
+                                                <div class="premium-img">
+                                                    <a href="#">
+                                                        <img src="img/pro-img-1.png" />
+                                                    </a>
+                                                </div>
+                                                <div class="premium-item-text">Premium Offer 1
+                                                </div>
+                                                <div class="premium-item-te">Pazzo Year-End Sales
+                                                    <br />Up-to 50%off</div>
+                                            </div>
+                                            <div class="right-text">0.2km</div>
+                                        </div>
+                                    </article>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <ul data-role="listview">
+                                <li>
+                                    <article>
+
+                                        <div class="select-main-box-pro">
+                                            <div class="premium-h">Premium <span>Listing</span>
+                                            </div>
+                                            <div class="premium-item">
+                                                <div class="premium-img">
+                                                    <a href="#">
+                                                        <img src="img/pro-img-1.png" />
+                                                    </a>
+                                                </div>
+                                                <div class="premium-item-text">Premium Offer 1
+                                                </div>
+
+                                                <div class="premium-item-te">Pazzo Year-End Sales
+                                                    <br />Up-to 50%off</div>
+                                            </div>
+                                            <div class="right-text">0.2km</div>
+
+
+
+
+                                        </div>
+                                    </article>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li>
+                            <ul data-role="listview">
+                                <li>
+
+                                    <article>
+                                        
+                                            <div class="select-main-box-pro">
+                                                <div class="premium-h">Premium <span>Listing</span>
+                                                </div>
+                                                <div class="premium-item">
+                                                    <div class="premium-img">
+                                                        <a href="#">
+                                                            <img src="img/pro-img-1.png" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="premium-item-text">Premium Offer 1
+                                                    </div>
+
+                                                    <div class="premium-item-te">Pazzo Year-End Sales
+                                                        <br />Up-to 50%off</div>
+                                                </div>
+                                                <div class="right-text">0.2km</div>
+
+
+
+
+                                            </div>
+                                        
+                                    </article>
+
+                                </li>
+                            </ul>
+                        </li>-->
+                    </ul>
+                </div>
+                <!-- .inner -->
+
+            </div>
+            <!-- #overflow -->
+
+            <div data-role="popup" id="transitionExample" data-theme="a">
+                <div class="ui-grid-d">
+                    <div class="ui-block-a">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-b">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-eye ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-c">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-d">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-e">
+                        <button onclick="scanCode()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-grid ui-btn-icon-notext"></button>
+                    </div>
+                </div>
+                <!-- /grid -->
+            </div>
+        </div>
+        <!--        <div data-role="footer" data-position-fixed="true">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#" data-icon="home"></a>
+                    </li>
+                    <li>
+                        <a href="#" data-icon="eye"></a>
+                    </li>
+                    <li>
+                        <a href="#" data-icon="plus"></a>
+                    </li>
+                    <li>
+                        <a href="#" data-icon="location"></a>
+                    </li>
+                    <li>
+                        <a onclick="scanCode()" href="#" data-icon="grid"></a>
+                    </li>
+                </ul>
+            </div>-->
+        <!-- /navbar -->
+        <!-- </div>-->
+        <!--footer-->
+
+
+        <!--Menu-->
+        <!--<div class="ui-bar-b" data-role="panel" id="menuPanel">
+            <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a onclick="scanCode()" href="#"  >Barcode</a>
+                </li>
+                <li>
+                    <a href="#registerpage"  >Sign Up</a>
+                </li>
+                <li>
+                    <a href="#loginpage" data-transition="pop">Login</a>
+                </li>
+                <li data-role="list-divider">categories</li>
+                <li>
+                    <a href="#"  >Womens</a>
+                </li>
+                <li>
+                    <a href="#"  >Mens</a>
+                </li>
+                <li>
+                    <a href="#"  >Features</a>
+                </li>
+                <li>
+                    <a href="#"  >Brands</a>
+                </li>
+                <li data-role="list-divider">Other</li>
+                <li>
+                    <a href="#"  >Point</a>
+                </li>
+                <li>
+                    <a href="#tspecial"  >Discount</a>
+                </li>
+                <li>
+                    <a href="#"  >Notification</a>
+                </li>
+                <li>
+                    <a href="#listingpage"  >LBS</a>
+                </li>
+                <li>
+                    <a href="#"  >All cards</a>
+                </li>
+            </ul>
+
+        </div>-->
+        <!--End menu-->
+        <!--Footer Menu-->
+        <!--<div data-role='footer' data-tap-toggle='true' data-position="fixed" data-position-fixed='true' data-theme='a'>
+
+            <div data-role='navbar'>
+                <ul>
+                    <li>
+                        <a href='#mainpage' onclick="$.mobile.changePage('#mainpage')" data-icon='home'></a>
+                    </li>
+                    <li>
+                        <a href='#' data-icon='eye'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="update_data()" data-icon='plus'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="$.mobile.changePage('#add_location')" data-icon='location'></a>
+                    </li>
+                    <li>
+                        <a onclick='scanCode()' href='#' data-icon='grid'></a>
+                    </li>
+                </ul>
+            </div>
+            
+            </div>-->
+
+
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed" id="mainnavi">
+            <div class="nav">
+                <ul>
+                    <li id="m1" style="-webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.5);background: #dc6c0c;"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img height="50px" src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img height="50px" src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img height="50px" src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img height="50px" src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+
+
+
+        </div>
+        <!--End Footer Menu-->
+
+
+
+        <div data-role="popup" id="adspopup" data-overlay-theme="a">
+
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
+            <iframe id="ads_iframe" src="ads.html" width="100%" height="420px" seamless></iframe>
+
+        </div>
+
+
+
+
+        <div data-role="popup" id="loding_data" data-overlay-theme="b" data-theme="b" style="max-width:400px;">
+            <!--
+            <div data-role="header" data-theme="a">
+                <h1>Sorry</h1>
+            </div>
+-->
+
+            <!--
+            <div role="main" class="ui-content">
+                <h2 class="ui-title">You selected criteria are too broad.</h2>
+                <p>Tips to help find what you want:</p>
+                <p>Be specific in at least one criteria.</p>
+                <p>Make sure the keyword are spelled correctly.</p>
+                <p>Choose fewer of different keywords.</p>
+            </div>
+-->
+        </div>
+
+
+
+    </div>
+    <!--End Main Page-->
+
+
+    <!--today special page-->
+    <div id="tspecial" data-role="page">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div>Today's Special</div>
+            </div>
+
+        </div>
+        <!--<div data-role="header" data-position="fixed" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <a href="#menu" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+            <button onclick="$( menuPanels ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>
+
+            <img src="img/logo.png" style="height: 41px;width: 41%;">
+
+            <a href="#search" onclick="$.mobile.changePage('#search')"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+        </div>-->
+        <div data-role="header" data-position-fixed="true">
+            <!--<button onclick="$( menuPanels ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>
+            <img src="img/life_style_logo_w.png" class="ui-btn-icon-left" style="height: 40px;width: 15vw;">-->
+            <!--            <h2 role="heading">Today's Special</h2>-->
+            <!-- <a href="#search"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>-->
+        </div>
+
+
+        <!--<div data-role="header">
+            <form class="ui-grid-c center ">
+                <div class="ui-block-a">
+                    <label for="select-category" style="font-size: 12px;font-size: 0.02rem;">Category</label>
+                    <select id="select-category" name="select-category" data-shadow="false" data-mini="true">
+                        
+                        <option value="all">All</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Kitchen">Kitchen</option>
+                        <option value="Restaurant">Restaurant</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Shoes & Bags">Shoes & Bags</option>
+                        <option value="Cosmetics">Cosmetics</option>
+                    </select>
+                </div>
+                <div class="ui-block-b">
+                    <label for="select-card" style="font-size: 12px;font-size: 0.02rem;">Card</label>
+                    <select id="select-card" name="select-card" data-shadow="false" data-mini="true">
+                       
+                        <option value="all">All</option>
+                        <option value="CMB">CMB</option>
+                        <option value="POSB">POSB</option>
+                        <option value="DBS">DBS</option>
+                        <option value="UOB">UOB</option>
+                        <option value="CITI Bank">CITI Bank</option>
+                        <option value="Safra">Safra</option>
+                        <option value="Passion">Passion</option>
+                        <option value="AMEX">AMEX</option>
+                    </select>
+                </div>
+                <div class="ui-block-c">
+                    <label for="select-loc" style="font-size: 12px;font-size: 0.02rem;">LOC</label>
+                    <select id="select-loc" name="select-loc" data-shadow="false" data-mini="true">
+                        <option value="all">All</option>
+                        <option value="1">Loc 1</option>
+                        <option value="2">Loc 2</option>
+                        <option value="3">Loc 3</option>
+                    </select>
+                </div>
+
+                <div class="ui-block-d center" id="for_range">
+
+                    <label for="slider" style="font-size: 12px;font-size: 0.02rem;">Range(Km)</label>
+                    <div id="slider" value="2.5" min="0" max="5" step="0.5" data-highlight="true" data-mini="true" data-theme="b"></div>
+                </div>
+            </form>
+        </div>-->
+
+
+        <div class="main-screen-out-div">
+            <div class="select-main-box-pro">
+                <div class="select-div">
+                    <div class="category-h">Category</div>
+
+                    <span class="custom-dropdown custom-dropdown--white">
+                            <select id="select-category" class="custom-dropdown__select custom-dropdown__select--white" data-role="none">
+                                <option value="all">All</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Kitchen">Kitchen</option>
+                        <option value="Restaurant">Restaurant</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Shoes & Bags">Shoes & Bags</option>
+                        <option value="Cosmetics">Cosmetics</option>
+                            </select>
+                        </span>
+
+
+
+                </div>
+                <div class="select-div">
+                    <div class="category-h">Card</div>
+
+
+                    <span class="custom-dropdown custom-dropdown--white">
+                            <select id="select-card" class="custom-dropdown__select custom-dropdown__select--white" data-role="none">
+                                <option value="all">All</option>
+                        <option value="CMB">CMB</option>
+                        <option value="POSB">POSB</option>
+                        <option value="DBS">DBS</option>
+                        <option value="UOB">UOB</option>
+                        <option value="CITI Bank">CITI Bank</option>
+                        <option value="Safra">Safra</option>
+                        <option value="Passion">Passion</option>
+                        <option value="AMEX">AMEX</option>
+
+                            </select>
+                        </span>
+
+                </div>
+                <div class="select-div">
+                    <div class="category-h">loc</div>
+                    <span class="custom-dropdown custom-dropdown--white">
+                            <select id="select-loc" class="custom-dropdown__select custom-dropdown__select--white" data-role="none">
+                                <option value="all">All</option>
+                        <option value="1">Loc 1</option>
+                        <option value="2">Loc 2</option>
+                        <option value="3">Loc 3</option>
+                            </select>
+                        </span>
+                </div>
+
+                <div id="for_range" class="select-div">
+                    <div class="category-h">Range(Km)</div>
+                    <!-- <label for="slider" >Range(Km)</label>-->
+                    <div id="slider" value="2.5" min="0" max="5" step="0.5" data-highlight="true" data-mini="true" data-theme="b"></div>
+                </div>
+
+
+
+
+                <!--<div class="clear"></div>-->
+                <!--                <div  class="select-main-box-pro">-->
+
+                <div id="div_List">
+
+
+                    <!--<div class="premium-item-nice">
+                                <div class="premium-img-nice">
+                                    <a href="#">
+                                        <img src="img/nice-img-1.png" />
+                                    </a>
+                                </div>
+                                <div class="canter-taxt">
+                                    <div class="premium-item-text-nice">Nice Ware</div>
+
+                                    <div class="premium-item-te-nice">Takashimaya/Suntec City</div>
+                                    <div class="premium-item-te-nice">UOB/CitiBank</div>
+
+                                </div>
+                                <div class="canter-taxt-1">
+
+
+                                    <div class="premium-item-te-nice-1">Kitchen</div>
+                                    <div class="premium-item-te-nice-1">From 30%</div>
+
+                                </div>
+                            </div>
+                            <div class="right-text-nice">100m</div>
+                        </div>
+                
+                <div class="premium-item-box">
+                            <div class="premium-item-nice">
+                                <div class="premium-img-nice">
+                                    <a href="#">
+                                        <img src="img/nice-img-5.png" />
+                                    </a>
+                                </div>
+                                <div class="canter-taxt">
+                                    <div class="premium-item-text-nice">Good Face</div>
+
+                                    <div class="premium-item-te-nice">313 Somerset</div>
+                                    <div class="premium-item-te-nice">UOB/CitiBank</div>
+
+                                </div>
+                                <div class="canter-taxt-1">
+
+
+                                    <div class="premium-item-te-nice-1">Cosmetics</div>
+                                    <div class="premium-item-te-nice-1">From 30%</div>
+
+                                </div>
+                            </div>
+                            <div class="right-text-nice">1km</div>
+                        </div>-->
+
+
+                    <div class="premium-item-box">
+                        <div class="premium-item-nice ui-grid-b ui-responsive" data-option="15">
+                            <div class="premium-img-nice ui-block-a">
+                                <a href="#">
+                                    <img src="img/nice-img-6.png" />
+                                </a>
+                            </div>
+                            <div class="canter-taxt ui-block-b">
+                                <div class="premium-item-text-nice">Gorgeous Dress</div>
+
+                                <div class="premium-item-te-nice">Icon</div>
+                                <div class="premium-item-te-nice">CMB/POSB/DBS</div>
+
+                            </div>
+                            <div class="canter-taxt-1 ui-block-c">
+
+
+                                <div class="premium-item-te-nice-1">Fashion</div>
+                                <div class="premium-item-te-nice-1">1 for 2</div>
+
+                            </div>
+                        </div>
+                        <div class="right-text-nice">3km</div>
+                    </div>
+                </div>
+
+
+
+                <!--Menu-->
+                <!--<div class="ui-bar-b" data-role="panel" id="menuPanels">
+            <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                <li>
+                    <a href="#mainpage"  >Home</a>
+                </li>
+                <li>
+                    <a onclick="scanCode()" href="#"  >Barcode</a>
+                </li>
+                <li>
+                    <a href="#registerpage"  >Sign Up</a>
+                </li>
+                <li>
+                    <a href="#loginpage" data-transition="pop">Login</a>
+                </li>
+                <li data-role="list-divider">categories</li>
+                <li>
+                    <a href="#"  >Womens</a>
+                </li>
+                <li>
+                    <a href="#"  >Mens</a>
+                </li>
+                <li>
+                    <a href="#"  >Features</a>
+                </li>
+                <li>
+                    <a href="#"  >Brands</a>
+                </li>
+                <li data-role="list-divider">Other</li>
+                <li>
+                    <a href="#"  >Point</a>
+                </li>
+                <li>
+                    <a href="#tspecial"  >Discount</a>
+                </li>
+                <li>
+                    <a href="#"  >Notification</a>
+                </li>
+                <li>
+                    <a href="#listingpage"  >LBS</a>
+                </li>
+                <li>
+                    <a href="#"  >All cards</a>
+                </li>
+            </ul>
+
+        </div>-->
+                <!--End menu-->
+
+                <div id="ListDiv" data-role="main" class="ui-content">
+                    <!--<ul data-role="listview">
+                <li>
+                    <a href="#">
+                        <img src="img/thumb1.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Nice Ware</h2>
+                                    <p>Takashimaya/Suntec City</p>
+                                    <p>UOB/CitiBank</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Kitchen</h3>
+                                    <p style="text-align: -webkit-right;">From 30%</p>
+                                    <p style="text-align: -webkit-right;">100m</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/thumb2.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Fab Food</h2>
+                                    <p>Suntec City</p>
+                                    <p>All</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Restaurant</h3>
+                                    <p style="text-align: -webkit-right;">1 eats free</p>
+                                    <p style="text-align: -webkit-right;">300m</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/thumb3.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Honest Joe</h2>
+                                    <p>Funan</p>
+                                    <p>SAFRA/Passion</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Electronics</h3>
+                                    <p style="text-align: -webkit-right;">Up to 50%</p>
+                                    <p style="text-align: -webkit-right;">500m</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/thumb4.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Everywhere Shoes</h2>
+                                    <p>Funan</p>
+                                    <p>AMEX</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Shoes & Bags</h3>
+                                    <p style="text-align: -webkit-right;">From 20%</p>
+                                    <p style="text-align: -webkit-right;">1km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/thumb5.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Good Face</h2>
+                                    <p>313 Somerest</p>
+                                    <p>UOB/CitiBank</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Cosmetics</h3>
+                                    <p style="text-align: -webkit-right;">From 30%</p>
+                                    <p style="text-align: -webkit-right;">2km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/thumb.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Gorgeous Dress</h2>
+                                    <p>Icon</p>
+                                    <p>CMB/POSB/DBS</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Fashion</h3>
+                                    <p style="text-align: -webkit-right;">1 for 2</p>
+                                    <p style="text-align: -webkit-right;">3km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>-->
+                </div>
+
+            </div>
+        </div>
+        <script>
+            filter_list_cat();
+        </script>
+
+        <!--Footer Menu-->
+        <!--<div data-role='footer' data-tap-toggle='true' data-position="fixed" data-position-fixed='true' data-theme='a'>
+            <div data-role='navbar'>
+                <ul>
+                    <li>
+                        <a href='#mainpage' onclick="$.mobile.changePage('#mainpage')" data-icon='home'></a>
+                    </li>
+                    <li>
+                        <a href='#' data-icon='eye'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="update_data()" data-icon='plus'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="$.mobile.changePage('#add_location')" data-icon='location'></a>
+                    </li>
+                    <li>
+                        <a onclick='scanCode()' href='#' data-icon='grid'></a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>-->
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+    </div>
+    <!--End today special page-->
+
+
+
+    <!--Category page-->
+    <div id="category_page" data-role="page">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span>
+                
+                    
+                
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div id="cat_title" >Category</div> <!--style="margin: 1px;margin-top: 9px;width: 36%;overflow: hidden;white-space:nowrap;     text-overflow: ellipsis;"-->
+            </div>
+
+        </div>
+
+        <!--<div data-role="header" data-position-fixed="true">
+
+            <h2 id="cat_title" role="heading">Category</h2>
+
+        </div>
+-->
+
+        <div class="main-screen-out-div">
+            <div class="select-main-box-pro">
+                <!--<div class="select-div">
+                    <div class="category-h">Category</div>
+
+                    <span class="custom-dropdown custom-dropdown--white">
+                            <select id="select-category" class="custom-dropdown__select custom-dropdown__select--white" data-role="none">
+                                <option value="all">All</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Kitchen">Kitchen</option>
+                        <option value="Restaurant">Restaurant</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Shoes & Bags">Shoes & Bags</option>
+                        <option value="Cosmetics">Cosmetics</option>
+                            </select>
+                        </span>
+
+
+
+                </div>
+                <div class="select-div">
+                    <div class="category-h">Card</div>
+
+
+                    <span class="custom-dropdown custom-dropdown--white">
+                            <select id="select-card" class="custom-dropdown__select custom-dropdown__select--white" data-role="none">
+                                <option value="all">All</option>
+                        <option value="CMB">CMB</option>
+                        <option value="POSB">POSB</option>
+                        <option value="DBS">DBS</option>
+                        <option value="UOB">UOB</option>
+                        <option value="CITI Bank">CITI Bank</option>
+                        <option value="Safra">Safra</option>
+                        <option value="Passion">Passion</option>
+                        <option value="AMEX">AMEX</option>
+
+                            </select>
+                        </span>
+
+                </div>
+                <div class="select-div">
+                    <div class="category-h">loc</div>
+                    <span class="custom-dropdown custom-dropdown--white">
+                            <select id="select-loc" class="custom-dropdown__select custom-dropdown__select--white" data-role="none">
+                                <option value="all">All</option>
+                        <option value="1">Loc 1</option>
+                        <option value="2">Loc 2</option>
+                        <option value="3">Loc 3</option>
+                            </select>
+                        </span>
+                </div>
+
+                <div id="for_range" class="select-div">
+                    <div class="category-h">Range(Km)</div>
+                    <div id="slider" value="2.5" min="0" max="5" step="0.5" data-highlight="true" data-mini="true" data-theme="b"></div>
+                </div>-->
+
+                <div id="div_cat_list">
+
+                </div>
+
+
+                <div id="catListDiv" data-role="main" class="ui-content">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+    </div>
+    <!--End category page-->
+
+
+    <div id="loginpage" data-role="page" data-dialog="true" data-close-btn="right">
+        <div data-role="header" data-position-fixed="true">
+            <h2>Login</h2>
+        </div>
+        <div class="ui-panel-inner">
+            <form class="userform">
+
+                <label for="select-login">Login As a:</label>
+                <div>
+                    <!-- <label for="select-login">Login As:</label>-->
+                    <select name="select-login" id="select-login">
+                        <option value="Mall">Mall</option>
+                        <option value="Merchant">Merchant</option>
+                        <option value="Card">Card</option>
+                    </select>
+                </div>
+
+                <label for="login_email">Email:</label>
+                <div>
+                    <input type="text" name="login_email" id="login_email" value="" data-clear-btn="true" data-mini="true">
+                </div>
+
+                <label for="password">Password:</label>
+                <div>
+                    <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+                </div>
+
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a href="#" data-rel="back" onclick="login_cancle()" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#" data-rel="close" onclick="login()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Login</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerpage" data-role="page" data-title="Register Account">
+
+        <div data-role="main" class="ui-content" style="padding: 2em;">
+            <form class="userform">
+                <label for="email">User Company Email:</label>
+                <div>
+                    <input type="text" name="email" id="email" value="" data-clear-btn="true" data-mini="true">
+                </div>
+                <label for="cpass">Password:</label>
+                <div>
+                    <input type="password" name="cpass" id="cpass" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+                </div>
+                <label for="name">Company Name:</label>
+                <div>
+                    <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+                </div>
+                <label for="companyreg">Company Registration Number:</label>
+                <div>
+                    <input type="text" name="companyreg" id="companyreg" value="" data-clear-btn="true" data-mini="true">
+                </div>
+
+                <label for="company-type">Company Type:</label>
+                <div>
+                    <!-- <label for="select-login">Login As:</label>-->
+                    <select name="company-type" id="company-type">
+                        <option value="Mall">Mall</option>
+                        <option value="Merchant">Merchant</option>
+                        <option value="Card">Card</option>
+                    </select>
+                </div>
+
+                <label for="country">Country Company is registered in:</label>
+                <div>
+                    <!-- <label for="select-login">Login As:</label>-->
+                    <select name="country" id="country">
+                        <option value="india">INDIA</option>
+                        <option value="pakistan">Pakistan</option>
+                    </select>
+                </div>
+
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a href="#" data-rel="back" onclick="reset_reg()" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#" data-rel="close" onclick="register()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Submit</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div id="search" data-role="page">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <div style="margin: auto;display: -webkit-inline-box;margin-top: 9px;">Search</div><span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+            </div>
+
+        </div>
+
+        <!--<div data-role="header" data-position="fixed" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <a href="#menu" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+            <button onclick="$( menuPanelse ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>
+
+            <img src="img/logo.png" style="height: 41px;width: 41%;">
+
+            <a href="#search" onclick="$.mobile.changePage('#search')"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+        </div>-->
+
+        <!--<div data-role="header" data-position-fixed="true">-->
+        <!-- <button onclick="$( menuPanelse ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>
+            <img src="img/life_style_logo_w.png" class="ui-btn-icon-left" style="height: 40px;width: 15vw;">-->
+        <!--<h2 role="heading">Search</h2>-->
+        <!--     <a href="#search"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>-->
+        <!--</div>-->
+
+
+        <div data-role="main" class="ui-content">
+            <div class="ui-field-contain">
+                <label for="search_category" class="select_lbl">
+                    <h3>Category:</h3>
+                </label>
+                <select name="search_category" id="search_category">
+                    <option value="mens">Mens</option>
+                    <option value="womens">Womens</option>
+                    <option value="features">Features</option>
+                    <option value="brands">Brands</option>
+                </select>
+
+                <label for="search_card" class="select_lbl">
+                    <h3>Card:</h3>
+                </label>
+                <select name="search_card" id="search_card">
+                    <option value="card1">card1</option>
+                    <option value="card2">card2</option>
+                    <option value="card3">card3</option>
+                    <option value="card4">card4</option>
+                </select>
+
+                <label for="search_location" class="select_lbl">
+                    <h3>Location:</h3>
+                </label>
+                <select name="search_location" id="search_location">
+                    <option value="all">All</option>
+                    <option value="location2">location2</option>
+                    <option value="location3">location3</option>
+                </select>
+
+                <label for="keywords" class="select_lbl">
+                    <h3>Keywords:</h3>
+                </label>
+                <input type="search" name="keywords" id="keywords" value="" style="border-radius: 25px;">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <button onclick="reset_search()" class="ui-btn ui-shadow ui-corner-all ui-mini ui-btn-b">Reset</button>
+                    </div>
+                    <div class="ui-block-b">
+                        <button onclick="search_key()" class="ui-mini ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search ">Search</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--Menu-->
+        <!-- <div class="ui-bar-b" data-role="panel" id="menuPanelse">
+            <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                <li>
+                    <a href="#mainpage"  >Home</a>
+                </li>
+                <li>
+                    <a onclick="scanCode()" href="#"  >Barcode</a>
+                </li>
+                <li>
+                    <a href="#registerpage"  >Sign Up</a>
+                </li>
+                <li>
+                    <a href="#loginpage" data-transition="pop">Login</a>
+                </li>
+                <li data-role="list-divider">categories</li>
+                <li>
+                    <a href="#"  >Womens</a>
+                </li>
+                <li>
+                    <a href="#"  >Mens</a>
+                </li>
+                <li>
+                    <a href="#"  >Features</a>
+                </li>
+                <li>
+                    <a href="#"  >Brands</a>
+                </li>
+                <li data-role="list-divider">Other</li>
+                <li>
+                    <a href="#"  >Point</a>
+                </li>
+                <li>
+                    <a href="#tspecial"  >Discount</a>
+                </li>
+                <li>
+                    <a href="#"  >Notification</a>
+                </li>
+                <li>
+                    <a href="#listingpage"  >LBS</a>
+                </li>
+                <li>
+                    <a href="#"  >All cards</a>
+                </li>
+            </ul>
+
+        </div>-->
+        <!--End menu-->
+
+        <!--Footer Menu-->
+        <!--<div data-role='footer' data-tap-toggle='true' data-position="fixed" data-position-fixed='true' data-theme='a'>
+            
+            
+            
+            <div data-role='navbar'>
+                <ul>
+                    <li>
+                        <a href='#mainpage' onclick="$.mobile.changePage('#mainpage')" data-icon='home'></a>
+                    </li>
+                    <li>
+                        <a href='#' data-icon='eye'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="update_data()" data-icon='plus'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="$.mobile.changePage('#add_location')" data-icon='location'></a>
+                    </li>
+                    <li>
+                        <a onclick='scanCode()' href='#' data-icon='grid'></a>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+
+
+        <!--Search result not found-->
+        <div data-role="popup" id="popup_result_notfound" data-overlay-theme="b" data-theme="b" style="max-width:400px;">
+            <div data-role="header" data-theme="a">
+                <h1>Sorry</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <h2 class="ui-title">You selected criteria are too broad.</h2>
+                <p>Tips to help find what you want:</p>
+                <p>Be specific in at least one criteria.</p>
+                <p>Make sure the keyword are spelled correctly.</p>
+                <p>Choose fewer of different keywords.</p>
+            </div>
+        </div>
+        <!--End Search result not found-->
+
+    </div>
+    <!--End Search page-->
+
+
+
+    <!--Search result page-->
+    <div id="search_result_pg" data-role="page">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div style="margin: auto;display: -webkit-inline-box;margin-top: 9px;">Search Result</div>
+            </div>
+
+        </div>
+
+        <!--<div data-role="header" data-position="fixed" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <a href="#menu" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+
+
+            <img src="img/logo.png" style="height: 41px;width: 41%;">
+
+            <a href="#search" onclick="$.mobile.changePage('#search')"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+        </div>-->
+        <!--<div data-role="header" data-position-fixed="true">
+
+            <h2 role="heading">Search Result</h2>
+
+        </div>
+-->
+
+        <!--<div data-role="header">
+            <form class="ui-grid-c center ">
+                <div class="ui-block-a">
+                    <label for="search_pg_category" style="font-size: 12px;font-size: 0.02rem;">Category</label>
+                    <select id="search_pg_category" name="search_pg_category" data-shadow="false" data-mini="true">
+                        <option value="all">All</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Kitchen">Kitchen</option>
+                        <option value="Restaurant">Restaurant</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Shoes & Bags">Shoes & Bags</option>
+                        <option value="Cosmetics">Cosmetics</option>
+                    </select>
+                </div>
+                <div class="ui-block-b">
+                    <label for="search_pg_card" style="font-size: 12px;font-size: 0.02rem;">Card</label>
+                    <select id="search_pg_card" name="select-card" data-shadow="false" data-mini="true">
+                        <option value="all">All</option>
+                        <option value="CMB">CMB</option>
+                        <option value="POSB">POSB</option>
+                        <option value="DBS">DBS</option>
+                        <option value="UOB">UOB</option>
+                        <option value="CITI Bank">CITI Bank</option>
+                        <option value="Safra">Safra</option>
+                        <option value="Passion">Passion</option>
+                        <option value="AMEX">AMEX</option>
+                    </select>
+                </div>
+                <div class="ui-block-c">
+                    <label for="search_pg_loc" style="font-size: 12px;font-size: 0.02rem;">LOC</label>
+                    <select id="search_pg_loc" name="search_pg_loc" data-shadow="false" data-mini="true">
+                        <option value="all">All</option>
+                        <option value="1">Loc 1</option>
+                        <option value="2">Loc 2</option>
+                        <option value="3">Loc 3</option>
+                    </select>
+                </div>
+
+                <div class="ui-block-d center" id="search_pg_range">
+
+                    <label for="search_pg_slider" style="font-size: 12px;font-size: 0.02rem;">Range(Km)</label>
+                    <div id="search_pg_slider" value="2.5" min="0" max="5" step="0.5" data-highlight="true" data-mini="true" data-theme="b"></div>
+
+                </div>
+
+
+            </form>
+        </div>-->
+
+
+        <div id="search_pg_ListDiv" data-role="main" class="ui-content">
+
+        </div>
+
+        <script>
+            //  filter_list_cat();
+        </script>
+
+        <!--Footer Menu-->
+        <!-- <div data-role='footer' data-tap-toggle='true' data-position="fixed" data-position-fixed='true' data-theme='a'>
+            
+           
+            
+            <div data-role='navbar'>
+                <ul>
+                    <li>
+                        <a href='#mainpage' onclick="$.mobile.changePage('#mainpage')" data-icon='home'></a>
+                    </li>
+                    <li>
+                        <a href='#' data-icon='eye'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="update_data()" data-icon='plus'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="$.mobile.changePage('#add_location')" data-icon='location'></a>
+                    </li>
+                    <li>
+                        <a onclick='scanCode()' href='#' data-icon='grid'></a>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+    </div>
+
+    <!--End search result page-->
+
+    <!--Select card page-->
+    <div id="select_card_pg" data-role="page">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+            </div>
+
+        </div>
+
+
+        <div data-role="header" data-position-fixed="true">
+
+            <h2 role="heading">Select Options</h2>
+
+        </div>
+
+        <div>
+            <div class="main-out">
+                <div class="out-div">
+                    <img src="img/glamour-img.png" />
+                </div>
+                <div class="out-div">
+                    <img src="img/glamour-img2.png" />
+                </div>
+                <div class="out-div">
+                    <img src="img/glamour-img3.png" />
+                </div>
+                <div class="out-div">
+                    <img src="img/glamour-img4.png" />
+                </div>
+            </div>
+            <div class="main-screen-out-div">
+                <div class="select-main-box">
+                    <div class="select-hading">Select Options</div>
+                    <div id="select-tex">
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_1">
+                            <label data-role="none" class="css-label" name="demo_lbl_1" for="demo_box_1">Points</label>
+                        </div>
+
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_2">
+                            <label data-role="none" class="css-label" name="demo_lbl_2" for="demo_box_2">Discount</label>
+                        </div>
+
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_3">
+                            <label data-role="none" class="css-label" name="demo_lbl_3" for="demo_box_3">Rebate</label>
+                        </div>
+                    </div>
+                    <div id="select-tex-right">
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_4">
+                            <label data-role="none" class="css-label" name="demo_lbl_4" for="demo_box_4">Fashion</label>
+                        </div>
+
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_5">
+                            <label data-role="none" class="css-label" name="demo_lbl_5" for="demo_box_5">Petrol</label>
+                        </div>
+
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_6">
+                            <label data-role="none" class="css-label" name="demo_lbl_6" for="demo_box_6">Computer</label>
+                        </div>
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_7">
+                            <label data-role="none" class="css-label" name="demo_lbl_7" for="demo_box_7">etc</label>
+                        </div>
+                    </div>
+
+                    <div id="select-tex">
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_8">
+                            <label data-role="none" class="css-label" name="demo_lbl_8" for="demo_box_8">Notification</label>
+                        </div>
+
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_9">
+                            <label data-role="none" class="css-label" name="demo_lbl_9" for="demo_box_9">LBS</label>
+                        </div>
+
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_10">
+                            <label data-role="none" class="css-label" name="demo_lbl_10" for="demo_box_10">All Cards(?)</label>
+                        </div>
+                        <div class="list-td list-details-text library-last-td">
+                            <input data-role="none" type="checkbox" checked="checked" class="css-checkbox" id="demo_box_11">
+                            <label data-role="none" class="css-label" name="demo_lbl_11" for="demo_box_11">Sign Up New</label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+    </div>
+    <!--End Select card page-->
+
+
+
+
+    <!--Fashion page-->
+    <div id="fashion_pg" data-role="page">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <div style="margin: auto;display: -webkit-inline-box;margin-top: 9px;">Fashion</div><span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+            </div>
+
+        </div>
+
+
+        <!--<div data-role="header" data-position-fixed="true">
+
+            <h2 role="heading">Fashion</h2>
+
+        </div>-->
+
+        <div>
+            <div class="banner-2">
+                <img src="img/banner-2.png" />
+            </div>
+            <div class="main-screen-out-div">
+
+
+
+
+
+                <div class="select-main-box-pro">
+                    <div class="favorite-h">Favorite Fashion Gallery</div>
+                    <div class="favorite-text">All latest designs from Italy for the discerning few.</div>
+
+
+
+
+                    <div class="clear"></div>
+
+
+
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">Nearest</div>
+                        <div class="premium-item-ne">:</div>
+                        <div class="premium-item-text-nearest">Takashimaya</div>
+
+                    </div>
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">Other</div>
+                        <div class="premium-item-ne">:</div>
+                        <div class="premium-item-text-nearest">Parkway Parade/Century Square</div>
+
+                    </div>
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">Hours</div>
+                        <div class="premium-item-ne">:</div>
+                        <div class="premium-item-text-nearest">10am-10pm (Sun-Mon)</div>
+
+
+
+
+                    </div>
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">&nbsp;</div>
+                        <div class="premium-item-ne">:</div>
+                        <div class="premium-item-text-nearest">8am-12mn (Fri-Sat)</div>
+
+                    </div>
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">Offer</div>
+                        <div class="premium-item-ne">:</div>
+                        <div class="premium-item-text-nearest">CitiBank 30%</div>
+
+                    </div>
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">&nbsp;</div>
+                        <div class="premium-item-ne">:</div>
+                        <div class="premium-item-text-nearest">UOB 28%</div>
+                    </div>
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">&nbsp;</div>
+                        <div class="premium-item-ne">:</div>
+                        <div class="premium-item-text-nearest">OCBC 25%</div>
+                    </div>
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">&nbsp;</div>
+                        <div class="premium-item-ne">:</div>
+                        <div class="premium-item-text-nearest">Passion 15%</div>
+
+                    </div>
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">&nbsp;</div>
+                        <div class="premium-item-ne">:</div>
+                        <div class="premium-item-text-nearest">SAFRA Free 1 for 3</div>
+                    </div>
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">Valid</div>
+                        <div class="premium-item-ne">:</div>
+                        <div class="premium-item-text-nearest">3 Dec 13 to 29 Jan 14</div>
+
+                    </div>
+
+                    <div class="premium-item-box-nearest">
+
+                        <div class="premium-item-nearest">&nbsp;</div>
+                        <div class="premium-item-ne">&nbsp;</div>
+                        <div class="premium-item-text-nearest">&nbsp;</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+    </div>
+    <!--End Fashion page-->
+
+
+
+    <!--Advert Page-->
+
+    <div data-role="page" id="advertpage">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <div style="margin: auto;display: -webkit-inline-box;margin-top: 9px;">Advert</div><span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+            </div>
+
+        </div>
+
+        <!--<div data-role="header" data-position="fixed" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <a href="#menu" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+            <button onclick="$( menuPaneladv ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>
+
+            <img src="img/logo.png" style="height: 41px;width: 41%;">
+
+            <a href="#search" onclick="$.mobile.changePage('#search')"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+        </div>-->
+
+        <!--<div data-role="header">-->
+        <!--<button onclick="$( menuPaneladv ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>-->
+        <!--<img src="img/life_style_logo_w.png" class="ui-btn-icon-left" style="height: 40px;width: 15vw;">-->
+        <!--<h2 role="heading">Advert</h2>-->
+        <!--<button onclick="$( menuPanel ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>-->
+        <!--<a href="#search"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>-->
+        <!--</div>-->
+
+        <div data-role="header" style="text-align: -webkit-center;">
+            <!-- <h1>Advertisements</h1>-->
+            <!--<img src="img/ad.png" style="height: 70vh;width: 100vw;">-->
+
+            <div>
+                <ul class="bxslider" id="slider_ads">
+                    <li>
+                        <img src="img/ad.png" onclick="$.mobile.changePage('#advertpage');" alt="Picture" style="height: 65vh;width: 100%;" />
+                    </li>
+                    <li>
+                        <img src="img/big/1.png" onclick="$.mobile.changePage('#advertpage');" alt="Picture" style="height: 65vh;width: 100%;" />
+                    </li>
+                    <li>
+                        <img src="img/big/2.png" onclick="$.mobile.changePage('#advertpage');" alt="Picture" style="height: 65vh;" />
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--<div data-role="main" class="ui-content">
+            
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Advert
+                    
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>Card A</h2>
+                        <p class="ui-li-aside">
+                            <strong>51%</strong>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>CardB</h2>
+                        <p class="ui-li-aside">
+                            <strong>31%</strong>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>Passion</h2>
+                        <p class="ui-li-aside">
+                            <strong>11%</strong>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>Card C</h2>
+                        <p class="ui-li-aside">
+                            <strong>5%</strong>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>Card D</h2>
+                        <p class="ui-li-aside">
+                            <strong>%21</strong>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+
+        </div>-->
+
+        <!--        <div data-role="footer" style="text-align: -webkit-center;">
+
+            14 Locations
+            <a href="#" target="_blank">Nearest</a>
+            <a href="#" target="_blank">Other</a>
+        </div>-->
+
+        <!--<div id="p_listing" data-role="footer">
+            <h1>Premium Listing</h1>
+
+            <div data-role="popup" id="transitionExample" data-theme="a">
+                <div class="ui-grid-d">
+                    <div class="ui-block-a">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-b">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-eye ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-c">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-d">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-e">
+                        <button onclick="scanCode()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-grid ui-btn-icon-notext"></button>
+                    </div>
+                </div>
+                 / comment grid 
+            </div>
+        </div>-->
+        <!--        <div data-role="footer" data-position-fixed="true">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#" data-icon="home"></a>
+                    </li>
+                    <li>
+                        <a href="#" data-icon="eye"></a>
+                    </li>
+                    <li>
+                        <a href="#" data-icon="plus"></a>
+                    </li>
+                    <li>
+                        <a href="#" data-icon="location"></a>
+                    </li>
+                    <li>
+                        <a onclick="scanCode()" href="#" data-icon="grid"></a>
+                    </li>
+                </ul>
+            </div>-->
+        <!-- /navbar -->
+        <!-- </div>-->
+        <!--footer-->
+
+
+        <!--Menu-->
+        <!--<div class="ui-bar-b" data-role="panel" id="menuPaneladv">
+            <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                <li>
+                    <a href="#mainpage">Home</a>
+                </li>
+                <li>
+                    <a onclick="scanCode()" href="#"  >Barcode</a>
+                </li>
+                <li>
+                    <a href="#registerpage"  >Sign Up</a>
+                </li>
+                <li>
+                    <a href="#loginpage" data-transition="pop">Login</a>
+                </li>
+                <li data-role="list-divider">categories</li>
+                <li>
+                    <a href="#"  >Womens</a>
+                </li>
+                <li>
+                    <a href="#"  >Mens</a>
+                </li>
+                <li>
+                    <a href="#"  >Features</a>
+                </li>
+                <li>
+                    <a href="#"  >Brands</a>
+                </li>
+                <li data-role="list-divider">Other</li>
+                <li>
+                    <a href="#"  >Point</a>
+                </li>
+                <li>
+                    <a href="#tspecial"  >Discount</a>
+                </li>
+                <li>
+                    <a href="#"  >Notification</a>
+                </li>
+                <li>
+                    <a href="#listingpage"  >LBS</a>
+                </li>
+                <li>
+                    <a href="#"  >All cards</a>
+                </li>
+            </ul>
+
+        </div>-->
+        <!--End menu-->
+        <!--Footer Menu-->
+        <!--<div data-role='footer' data-tap-toggle='true' data-position="fixed" data-position-fixed='true' data-theme='a'>
+           
+            
+            <div data-role='navbar'>
+                <ul>
+                    <li>
+                        <a href='#mainpage' onclick="$.mobile.changePage('#mainpage')" data-icon='home'></a>
+                    </li>
+                    <li>
+                        <a href='#' data-icon='eye'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="update_data()" data-icon='plus'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="$.mobile.changePage('#add_location')" data-icon='location'></a>
+                    </li>
+                    <li>
+                        <a onclick='scanCode()' href='#' data-icon='grid'></a>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+
+    </div>
+    <!--End Advert Page-->
+
+
+    <!--Listing page-->
+    <div id="listingpage" data-role="page">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <div style="margin: auto;display: -webkit-inline-box;margin-top: 9px;">Listing</div><span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+            </div>
+
+        </div>
+
+        <!-- <div data-role="header" data-position="fixed" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <a href="#menu" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+             <button onclick="$( menuPanellist ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>
+
+            <img src="img/logo.png" style="height: 41px;width: 41%;">
+
+            <a href="#search" onclick="$.mobile.changePage('#search')"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+        </div>-->
+        <!--        <div data-role="header" data-position-fixed="true">-->
+        <!--<button onclick="$( menuPanellist ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>
+            <img src="img/life_style_logo_w.png" class="ui-btn-icon-left" style="height: 40px;width: 15vw;">-->
+        <!--            <h2 role="heading">Listing</h2>-->
+        <!--<a href="#search"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>-->
+        <!--        </div>-->
+        <!--Menu-->
+        <!--<div class="ui-bar-b" data-role="panel" id="menuPanellist">
+            <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                <li>
+                    <a href="#mainpage"  >Home</a>
+                </li>
+                <li>
+                    <a onclick="scanCode()" href="#"  >Barcode</a>
+                </li>
+                <li>
+                    <a href="#registerpage"  >Sign Up</a>
+                </li>
+                <li>
+                    <a href="#loginpage" data-transition="pop">Login</a>
+                </li>
+                <li data-role="list-divider">categories</li>
+                <li>
+                    <a href="#"  >Womens</a>
+                </li>
+                <li>
+                    <a href="#"  >Mens</a>
+                </li>
+                <li>
+                    <a href="#"  >Features</a>
+                </li>
+                <li>
+                    <a href="#"  >Brands</a>
+                </li>
+                <li data-role="list-divider">Other</li>
+                <li>
+                    <a href="#"  >Point</a>
+                </li>
+                <li>
+                    <a href="#"  >Discount</a>
+                </li>
+                <li>
+                    <a href="#"  >Notification</a>
+                </li>
+                <li>
+                    <a href="#listingpage"  >LBS</a>
+                </li>
+                <li>
+                    <a href="#"  >All cards</a>
+                </li>
+            </ul>
+
+        </div>-->
+        <!--End menu-->
+        <div data-role="header">
+            <form class="ui-grid-c center ">
+                <div class="ui-block-a">
+                    <label for="list_select_category" style="font-size: 12px;font-size: 0.02rem;">Category</label>
+                    <select id="list_select_category" name="list_select_category" data-shadow="false" data-mini="true">
+                        <!--<option>Category</option>-->
+                        <option value="1">All</option>
+                        <option value="2">Mens</option>
+                        <option value="3">Womans</option>
+                        <option value="4">Other</option>
+                    </select>
+                </div>
+                <div class="ui-block-b">
+                    <label for="list_select_card" style="font-size: 12px;font-size: 0.02rem;">Card</label>
+                    <select id="list_select_card" name="list_select_card" data-shadow="false" data-mini="true">
+                        <!--<option>Category</option>-->
+                        <option value="1">All</option>
+                        <option value="2">Card 1</option>
+                        <option value="3">Card 2</option>
+                        <option value="4">Card 3</option>
+                    </select>
+                </div>
+                <div class="ui-block-c">
+                    <label for="list_select_loc" style="font-size: 12px;font-size: 0.02rem;">LOC</label>
+                    <select id="list_select_loc" name="list_select_loc" data-shadow="false" data-mini="true">
+                        <!--<option>Category</option>-->
+                        <option value="all">All</option>
+                        <option value="2">Loc 1</option>
+                        <option value="3">Loc 2</option>
+                        <option value="4">Loc 3</option>
+                    </select>
+                </div>
+                <div id="list_for_range" class="ui-block-d">
+
+                    <label for="list_select_range" style="font-size: 12px;font-size: 0.02rem;">Range(Km)</label>
+                    <div name="list_select_range" id="list_select_range" value="2.5" min="0" max="5" step="0.5" data-highlight="true" data-mini="true" data-theme="b"></div>
+
+                    <!--<label for="list_select_range" style="font-size: 12px;font-size: 0.02rem;">Range in km</label>
+                    <select id="list_select_range" name="list_select_range" data-shadow="false" data-mini="true">
+                        <option>Category</option>
+                        <option value="1">100m</option>
+                        <option value="2">500m</option>
+                        <option value="3">1km</option>
+                        <option value="4">1.5km</option>
+                        <option value="5">2km</option>
+                        <option value="6">2.5km</option>
+                        <option value="7">3km</option>
+                        <option value="8">3.5km</option>
+                        <option value="9">4km</option>
+                        <option value="10">4.5km</option>
+                        <option value="11">5km</option>
+                    </select>-->
+                </div>
+            </form>
+            <!-- /grid-d -->
+        </div>
+        <div data-role="main" class="ui-content">
+            <ul data-role="listview">
+                <li>
+                    <a href="#">
+                        <img src="img/thumb1.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Nice Ware</h2>
+                                    <p>Takashimaya/Suntec City</p>
+                                    <p>UOB/CitiBank</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Kitchen</h3>
+                                    <p style="text-align: -webkit-right;">From 30%</p>
+                                    <p style="text-align: -webkit-right;">100m</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/thumb2.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Fab Food</h2>
+                                    <p>Suntec City</p>
+                                    <p>All</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Restaurant</h3>
+                                    <p style="text-align: -webkit-right;">1 eats free</p>
+                                    <p style="text-align: -webkit-right;">300m</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/thumb3.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Honest Joe</h2>
+                                    <p>Funan</p>
+                                    <p>SAFRA/Passion</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Electronics</h3>
+                                    <p style="text-align: -webkit-right;">Up to 50%</p>
+                                    <p style="text-align: -webkit-right;">500m</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/thumb4.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Everywhere Shoes</h2>
+                                    <p>Funan</p>
+                                    <p>AMEX</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Shoes & Bags</h3>
+                                    <p style="text-align: -webkit-right;">From 20%</p>
+                                    <p style="text-align: -webkit-right;">1km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/thumb5.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Good Face</h2>
+                                    <p>313 Somerest</p>
+                                    <p>UOB/CitiBank</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Cosmetics</h3>
+                                    <p style="text-align: -webkit-right;">From 30%</p>
+                                    <p style="text-align: -webkit-right;">2km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/thumb.png">
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar" style="height:60px">
+                                    <h2>Gorgeous Dress</h2>
+                                    <p>Icon</p>
+                                    <p>CMB/POSB/DBS</p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar" style="height:60px">
+                                    <h3 style="text-align: -webkit-right;">Fashion</h3>
+                                    <p style="text-align: -webkit-right;">1 for 2</p>
+                                    <p style="text-align: -webkit-right;">3km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Footer Menu-->
+        <!-- <div data-role='footer' data-tap-toggle='true' data-position="fixed" data-position-fixed='true' data-theme='a'>
+            
+            
+            <div data-role='navbar'>
+                <ul>
+                    <li>
+                        <a href='#mainpage' onclick="$.mobile.changePage('#mainpage')" data-icon='home'></a>
+                    </li>
+                    <li>
+                        <a href='#' data-icon='eye'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="update_data()" data-icon='plus'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="$.mobile.changePage('#add_location')" data-icon='location'></a>
+                    </li>
+                    <li>
+                        <a onclick='scanCode()' href='#' data-icon='grid'></a>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+    </div>
+    <!--End Listing page-->
+
+
+    <!--Premium Offer Page-->
+
+    <div data-role="page" id="premiumofferpage">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div>Premium Offers</div>
+            </div>
+
+        </div>
+
+        <!--<div data-role="header" data-position="fixed" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <a href="#menu" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+            <button onclick="$( menuPanelprem ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>
+
+            <img src="img/logo.png" style="height: 41px;width: 41%;">
+
+            <a href="#search" onclick="$.mobile.changePage('#search')"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+        </div>-->
+
+        <!--<div data-role="header">-->
+        <!--<button onclick="$( menuPanelprem ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>-->
+        <!--<img src="img/life_style_logo_w.png" class="ui-btn-icon-left" style="height: 40px;width: 15vw;">-->
+        <!--<h2 role="heading">Premium Offers</h2>-->
+        <!--<button onclick="$( menuPanel ).panel( 'toggle' );" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></button>-->
+        <!--<a href="#search"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>-->
+        <!--</div>-->
+
+        <div data-role="header" style="
+    text-align: -webkit-center;
+">
+            <!-- <h1>Advertisements</h1>-->
+            <img src="img/ad.png" style="height: 24vh;width: 100vw;">
+
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <!--<p>All Listings</p>-->
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Advert
+                    <!--<span class="ui-li-count">20</span>-->
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>Card A</h2>
+                        <p class="ui-li-aside">
+                            <strong>51%</strong>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>CardB</h2>
+                        <p class="ui-li-aside">
+                            <strong>31%</strong>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>Passion</h2>
+                        <p class="ui-li-aside">
+                            <strong>11%</strong>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>Card C</h2>
+                        <p class="ui-li-aside">
+                            <strong>5%</strong>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <h2>Card D</h2>
+                        <p class="ui-li-aside">
+                            <strong>%21</strong>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+            <!-- <button onclick="create_footer()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-icon-notext"></button>-->
+
+        </div>
+
+        <div data-role="footer" style="text-align: -webkit-center;">
+
+            14 Locations
+            <a href="#" target="_blank">Nearest</a>
+            <a href="#" target="_blank">Other</a>
+
+            <!--<h1>Events</h1>-->
+            <!--<img src="img/big/banner.png" style="height: 21vh;width: 100vw;">-->
+            <!-- width: 75%;-->
+            <!-- <div style="background-image:url(img/big/banner.png);background-repeat:no-repeat;background-size:contain">
+                        <a href="#" target="_blank"></a>
+            </div>-->
+        </div>
+
+        <!--<div id="p_listing" data-role="footer">
+            <h1>Premium Listing</h1>
+
+            <div data-role="popup" id="transitionExample" data-theme="a">
+                <div class="ui-grid-d">
+                    <div class="ui-block-a">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-b">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-eye ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-c">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-d">
+                        <button onclick="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext"></button>
+                    </div>
+                    <div class="ui-block-e">
+                        <button onclick="scanCode()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-grid ui-btn-icon-notext"></button>
+                    </div>
+                </div>
+                 / comment grid 
+            </div>
+        </div>-->
+        <!--        <div data-role="footer" data-position-fixed="true">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#" data-icon="home"></a>
+                    </li>
+                    <li>
+                        <a href="#" data-icon="eye"></a>
+                    </li>
+                    <li>
+                        <a href="#" data-icon="plus"></a>
+                    </li>
+                    <li>
+                        <a href="#" data-icon="location"></a>
+                    </li>
+                    <li>
+                        <a onclick="scanCode()" href="#" data-icon="grid"></a>
+                    </li>
+                </ul>
+            </div>-->
+        <!-- /navbar -->
+        <!-- </div>-->
+        <!--footer-->
+
+
+        <!--Menu-->
+        <!--<div class="ui-bar-b" data-role="panel" id="menuPanelprem">
+            <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                <li>
+                    <a href="#mainpage">Home</a>
+                </li>
+                <li>
+                    <a onclick="scanCode()" href="#"  >Barcode</a>
+                </li>
+                <li>
+                    <a href="#registerpage"  >Sign Up</a>
+                </li>
+                <li>
+                    <a href="#loginpage" data-transition="pop">Login</a>
+                </li>
+                <li data-role="list-divider">categories</li>
+                <li>
+                    <a href="#"  >Womens</a>
+                </li>
+                <li>
+                    <a href="#"  >Mens</a>
+                </li>
+                <li>
+                    <a href="#"  >Features</a>
+                </li>
+                <li>
+                    <a href="#"  >Brands</a>
+                </li>
+                <li data-role="list-divider">Other</li>
+                <li>
+                    <a href="#"  >Point</a>
+                </li>
+                <li>
+                    <a href="#tspecial"  >Discount</a>
+                </li>
+                <li>
+                    <a href="#"  >Notification</a>
+                </li>
+                <li>
+                    <a href="#listingpage"  >LBS</a>
+                </li>
+                <li>
+                    <a href="#"  >All cards</a>
+                </li>
+            </ul>
+
+        </div>-->
+        <!--End menu-->
+        <!--Footer Menu-->
+        <!--<div data-role='footer' data-tap-toggle='true' data-position="fixed" data-position-fixed='true' data-theme='a'>
+            
+            
+            <div data-role='navbar'>
+                <ul>
+                    <li>
+                        <a href='#mainpage' onclick="$.mobile.changePage('#mainpage')" data-icon='home'></a>
+                    </li>
+                    <li>
+                        <a href='#' data-icon='eye'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="update_data()" data-icon='plus'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="$.mobile.changePage('#add_location')" data-icon='location'></a>
+                    </li>
+                    <li>
+                        <a onclick='scanCode()' href='#' data-icon='grid'></a>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+
+    </div>
+    <!--Premium Offer Page-->
+
+
+    <!--Page for list details-->
+    <div data-role="page" id="details_pg">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <div style="margin: auto;display: -webkit-inline-box;margin-top: 9px;">Details</div><span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+            </div>
+
+        </div>
+
+        <!--<div data-role="header" data-position="fixed" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <a href="#menu" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+
+            <img src="img/logo.png" style="height: 41px;width: 41%;">
+
+            <a href="#search" onclick="$.mobile.changePage('#search')"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+        </div>-->
+
+        <!--<div data-role="header">
+            <h2 role="heading">Details</h2>
+        </div>-->
+
+        <div id="details_div_img" data-role="header">
+            <img width="100%" src="img/top_detail.jpg">
+        </div>
+
+        <div data-role="main" class="ui-content ui-body ui-body-a ui-corner-all" style="border-bottom-width: 5px;border-left-width: 5px;border-top-width: 5px;border-right-width: 5px;padding-top: 10px;padding-left: 10px;padding-bottom: 10px;padding-right: 10px;">
+            <h2 id="details_title" style="color:#f48115;">Fashion Gallery</h2>
+            <br>
+
+            <table class="ui-bar ui-bar-b">
+                <tbody id="details_tbody">
+                </tbody>
+            </table>
+        </div>
+        <!--Footer Menu-->
+        <!--<div data-role='footer' data-tap-toggle='true' data-position="fixed" data-position-fixed='true' data-theme='a'>
+            
+            <div data-role='navbar'>
+                <ul>
+                    <li>
+                        <a href='#mainpage' onclick="$.mobile.changePage('#mainpage')" data-icon='home'></a>
+                    </li>
+                    <li>
+                        <a href='#' data-icon='eye'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="update_data()" data-icon='plus'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="$.mobile.changePage('#add_location')" data-icon='location'></a>
+                    </li>
+                    <li>
+                        <a onclick='scanCode()' href='#' data-icon='grid'></a>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+    </div>
+    <!--End details page-->
+
+    <!--Add page for new Location to app-->
+    <div data-role="page" id="add_location">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div style="margin: auto;display: -webkit-inline-box;margin-top: 9px;">Add Location</div>
+            </div>
+
+        </div>
+
+        <!--<div data-role="header" data-position="fixed" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <a href="#menu" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+
+            <img src="img/logo.png" style="height: 41px;width: 41%;">
+
+            <a href="#search" onclick="$.mobile.changePage('#search')"   class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+        </div>
+-->
+        <!--<div data-role="header">
+            <h2 role="heading">Add Location</h2>
+        </div>-->
+
+        <!--
+        <div data-role="main" class="ui-content">
+
+            <div class="content-primary">
+                <form>
+                    <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                        <li data-role="fieldcontain" class="ui-field-contain ui-body ui-br ui-li ui-li-static ui-btn-up-c ui-corner-top">
+
+                            <label for="loc_slider" id="loc_slider-label" class="ui-slider">How to Add Location:</label>
+
+                            <select name="loc_slider" id="loc_slider" data-role="slider" class="ui-slider-switch" style="width:101px;">
+                                <option value="map">Map</option>
+                                <option value="gps">GPS</option>
+                            </select>
+
+                        </li>
+
+
+                        <li data-role="fieldcontain" class="ui-field-contain ui-body ui-br ui-li ui-li-static ui-btn-up-c">
+                            <fieldset data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal">
+                                <a id="btn_loc_gps" onclick="add_loc_getposition()" href="#" data-role="button" style="width: 100%;" class="ui-disabled">Location From GPS</a>
+                                
+                            </fieldset>
+
+                        </li>
+
+                        <li data-role="fieldcontain" class="ui-field-contain ui-body ui-br ui-li ui-li-static ui-btn-up-c">
+                            <fieldset data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal">
+                                 <a href="#" data-role="button" data-corners="true">Location From GPS</a>
+                                <a id="btn_addloc_map" onclick="$( '#location_select_map' ).popup( 'open', { overlayTheme: 'a',corners: true , positionTo:'window' } );" href="#" data-role="button" data-inline="false" style="width: 100%;">Open Map</a>
+                            </fieldset>
+
+                        </li>
+
+                        <li data-role="fieldcontain" class="ui-field-contain ui-body ui-br ui-li ui-li-static ui-btn-up-c">
+                            <label for="loc_name" class="ui-input-text" style="border-width: 0px;">Name Of Location:</label>
+                            <input type="text" name="loc_name" id="loc_name" value="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                        </li>
+
+                        <li data-role="fieldcontain" class="ui-field-contain ui-body ui-br ui-li ui-li-static ui-btn-up-c">
+                            <label for="loc_latlng" class="ui-input-text" style="border-width: 0px;">Location:</label>
+                            <input type="text" name="loc_latlng" id="loc_latlng" disabled="disabled" value="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                        </li>
+
+                        <li class="ui-body ui-body-b ui-li ui-li-static ui-btn-up-c ui-corner-bottom ui-li-last">
+                            <fieldset class="ui-grid-a">
+                                <div class="ui-block-a">
+
+                                    
+                                    <a href="#" data-rel="back" data-role="button" data-theme="a" onclick="reset_loc()">Cancel</a>
+
+                                </div>
+                                <div class="ui-block-b">
+
+                                    
+                                    <a href="#" data-role="button" onclick="save_loc()">Add</a>
+
+                                </div>
+                            </fieldset>
+                        </li>
+
+                    </ul>
+
+
+
+                </form>
+
+            </div>
+
+            
+            <div data-role="popup" id="location_select_map" data-overlay-theme="a">
+
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
+                <iframe src="map.html" width="480" height="320" seamless></iframe>
+                <a href="#" data-rel="back" onclick="add_location_temp()" data-role="button" data-theme="a" data-icon="plus" data-iconpos="notext" class="ui-btn-left">Add</a>
+
+            </div>
+            
+
+        </div>
+-->
+
+        <!--Footer Menu-->
+        <!--<div data-role='footer' data-tap-toggle='true' data-position="fixed" data-position-fixed='true' data-theme='a'>
+            
+            <div data-role='navbar'>
+                <ul>
+                    <li>
+                        <a href='#mainpage' onclick="$.mobile.changePage('#mainpage')" data-icon='home'></a>
+                    </li>
+                    <li>
+                        <a href='#' data-icon='eye'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="update_data()" data-icon='plus'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="$.mobile.changePage('#add_location')" data-icon='location'></a>
+                    </li>
+                    <li>
+                        <a onclick='scanCode()' href='#' data-icon='grid'></a>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+
+    </div>
+    <!--End Add location page-->
+
+
+
+    <!--Fashion page-->
+    <div data-role="page" id="fashion_page">
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div style="margin: auto;display: -webkit-inline-box;margin-top: 9px;">Search Result</div>
+            </div>
+
+        </div>
+
+        <!--<div data-role="header" data-position="fixed" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <a href="#menu" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+
+            <img src="img/logo.png" style="height: 41px;width: 41%;">
+
+            <a href="#search" onclick="$.mobile.changePage('#search')" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-search ui-btn-icon-notext" style="width: 30px; height: 30px;"></a>
+        </div>-->
+
+        <div data-role="header">
+            <h2 role="heading">Fashion</h2>
+        </div>
+
+        <div data-role="header">
+            <img width="100%" src="img/top_detail.jpg">
+        </div>
+
+        <div data-role="main" class="ui-content ui-body ui-body-a ui-corner-all" style="border-bottom-width: 5px;border-left-width: 5px;border-top-width: 5px;border-right-width: 5px;padding-top: 10px;padding-left: 10px;padding-bottom: 10px;padding-right: 10px;">
+            <h2 style="color:#f48115;">Fashion Gallery</h2>
+            <br>
+
+            <table class="ui-bar ui-bar-b">
+                <tbody id="tbody_fashion_gallery">
+                    <tr>
+                        <td>Nearest:</td>
+                        <td style="color:#f48115;">Takashimaya</td>
+                    </tr>
+                    <tr>
+                        <td>Other:</td>
+                        <td style="color:#f48115;">Parkway Parade/Century Square</td>
+                    </tr>
+                    <tr>
+                        <td>Hours:</td>
+                        <td style="color:#f48115;">10am-10pm(Sun-Mon)
+                            <br>8am-12pm(Fir-Sat)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Offer:</td>
+                        <td style="color:#f48115;">CitiBank 30%
+                            <br>UOB 26%
+                            <br>OCBC 25%
+                            <br>Passion 15%
+                            <br>SAFRA Free 1 for 3</td>
+                    </tr>
+                    <tr>
+                        <td>Valid:</td>
+                        <td style="color:#f48115;">3 May 14 to 29 Jun 14</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--Footer Menu-->
+        <!--
+        <div data-role='footer' data-tap-toggle='true' data-position="fixed" data-position-fixed='true' data-theme='a'>
+            
+            
+            <div data-role='navbar'>
+                <ul>
+                    <li>
+                        <a href='#mainpage' onclick="$.mobile.changePage('#mainpage')" data-icon='home'></a>
+                    </li>
+                    <li>
+                        <a href='#' data-icon='eye'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="update_data()" data-icon='plus'></a>
+                    </li>
+                    <li>
+                        <a href='#' onclick="$.mobile.changePage('#add_location')" data-icon='location'></a>
+                    </li>
+                    <li>
+                        <a onclick='scanCode()' href='#' data-icon='grid'></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+-->
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--End Footer Menu-->
+    </div>
+    <!--End Fashion page-->
+
+
+
+    <!--Startup info page-->
+    <div data-role="page" id="startupinfo">
+
+        <div data-role="header" data-position-fixed="true" style="text-align: -webkit-center;">
+
+            <img src="img/logo.png" style="height: 41px;">
+
+        </div>
+        <div data-role="tabs" id="tabs">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#one" data-ajax="false">User Profile</a>
+                    </li>
+                    <li>
+                        <a href="#two" data-ajax="false">Email</a>
+                    </li>
+                    <li>
+                        <a href="#three" data-ajax="false">Cards</a>
+                    </li>
+                    <li>
+                        <a href="#four" data-ajax="false">Category</a>
+                    </li>
+                    <li>
+                        <a href="#five" data-ajax="false">Location</a>
+                    </li>
+                    <li>
+                        <a href="#six" data-ajax="false">Notification Alert</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div id="one" class="ui-body-d ui-content">
+                <h1>Personal</h1>
+                <form class="userform" id="form_personal">
+
+                    <label for="txtgender">Sex:</label>
+                    <select id="txtgender" name="txtgender" data-shadow="false" data-mini="true">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <!--<input type="text" name="txtgender" id="txtgender" value="" data-clear-btn="true" data-mini="true">-->
+                    <label for="txtageg">Age Range:</label>
+                    <select id="txtageg" name="txtagegtxtageg" data-shadow="false" data-mini="true">
+                        <option value="12">12 or less</option>
+                        <option value="13-16">13-16</option>
+                        <option value="17-25">17-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-45">36-45</option>
+                        <option value="46-55">46-55</option>
+                        <option value="56-65">56-65</option>
+                        <option value="66">66 or above</option>
+                    </select>
+
+                    <label for="txtmaritalstatus">Marital Status:</label>
+                    <select id="txtmaritalstatus" name="txtmaritalstatus" data-shadow="false" data-mini="true">
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                    </select>
+
+                    <fieldset data-role="controlgroup">
+                        <legend>Children:</legend>
+                        <input type="radio" name="radio-child-v-2" id="radio-child-v-2a" value="yes" onclick="radiochi(true)">
+                        <label for="radio-child-v-2a">Yes</label>
+                        <input type="radio" name="radio-child-v-2" id="radio-child-v-2b" value="no" onclick="radiochi(false)">
+                        <label for="radio-child-v-2b">No</label>
+                    </fieldset>
+
+                    <div class="ui-field-contain">
+                        <label for="selectmul-childage">Children Age:</label>
+                        <select name="selectmul-childage" id="selectmul-childage" multiple="multiple" data-native-menu="false">
+                            <option>Choose Age</option>
+                            <option value="Infant">Infant</option>
+                            <option value="Toddlery">Toddlery</option>
+                            <option value="Child">Child</option>
+                            <option value="Teens">Teens</option>
+                            <option value="YoungAdults">Young Adults</option>
+                            <option value="Adults">Adults</option>
+                        </select>
+                    </div>
+
+
+                    <!--<fieldset data-role="controlgroup">
+                        <legend>Children Age:</legend>
+                        <input type="checkbox" name="childage-1a" id="childage-1a">
+                        <label for="childage-1a">Infant</label>
+                        <input type="checkbox" name="childage-2a" id="childage-2a">
+                        <label for="childage-2a">Toddlery</label>
+                        <input type="checkbox" name="childage-3a" id="childage-3a">
+                        <label for="childage-3a">Child</label>
+                        <input type="checkbox" name="childage-4a" id="childage-4a">
+                        <label for="childage-4a">Teens</label>
+                        <input type="checkbox" name="childage-5a" id="childage-5a">
+                        <label for="childage-5a">Young Adults</label>
+                        <input type="checkbox" name="childage-6a" id="childage-6a">
+                        <label for="childage-6a">Adults</label>
+                    </fieldset>-->
+
+                    <a href="#" onclick="nexttab()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Next</a>
+                    <!--<div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#" onclick="nexttab()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Next</a>
+                        </div>
+                    </div>-->
+
+                </form>
+            </div>
+
+
+            <!--
+4.Email Address
+            1.User
+            2.Friends
+5.Cards
+    1.There should be option for up to 70 cards to select from
+    2.User should be able to select multiple cards and also indicate which cards
+    are preferred
+    3.Due to the large database, I would like users to be able to select by
+        1.Organisation (this will narrow down the number of cards displayed
+        for selection)
+        2.Card
+4.Needs to include card image and card name
+5.Include Expiry Date MMYYYY
+6.Category
+    1.User should be able to select multiple categories and indicate if Alert for this
+    category is allowed
+    2.Note that there may be more than 15 categories
+7.Location
+    1.Users can select/setup multiple locations and name them as well.
+    2.Location can be triggered from map location via search or name
+8.Notification Alert
+-->
+
+            <div id="two">
+                <h1>Email Address</h1>
+                <form class="userform">
+
+                    <label for="user_emai">Email:</label>
+                    <input type="text" name="user_emai" id="user_emai" value="">
+
+                    <h2>Friends Email</h2>
+                    <label for="friendemail">Sepreted by(,)</label>
+                    <textarea cols="40" rows="8" name="friendemail" id="friendemail"></textarea>
+
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a href="#" onclick="pretab()" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Previous</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#" onclick="nexttab()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Next</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div id="three">
+                <h1>Cards</h1>
+                <form class="userform">
+
+
+                    <!--<div class="select-div">
+                        <div class="category-h">Category</div>
+
+
+                        <span class="custom-dropdown custom-dropdown--white">
+                            <select id="drop_card_cat" class="custom-dropdown__select custom-dropdown__select--white" data-role="none">
+                                <option value="all">All</option>
+                        <option value="CMB">CMB</option>
+                        <option value="POSB">POSB</option>
+                        <option value="DBS">DBS</option>
+                        <option value="UOB">UOB</option>
+                        <option value="CITI Bank">CITI Bank</option>
+                        <option value="Safra">Safra</option>
+                        <option value="Passion">Passion</option>
+                        <option value="AMEX">AMEX</option>
+
+                            </select>
+                        </span>
+
+                    </div>-->
+
+
+                    <label for="drop_card_cat">Category:</label>
+                    <select id="drop_card_cat" name="drop_card_cat" data-shadow="false" data-mini="true">
+                        <option value="Credit">Credit</option>
+                        <option value="Debit">Debit</option>
+                    </select>
+
+                    <label for="drop_card_type">Type:</label>
+                    <select id="drop_card_type" name="drop_card_type" data-shadow="false" data-mini="true">
+                        <option value="Visa">Visa</option>
+                        <option value="Master">Master</option>
+                    </select>
+
+                    <div class="ui-field-contain">
+                        <label for="selectmul_cards">Category Preference:</label>
+                        <select name="selectmul_cards" id="selectmul_cards" multiple="multiple" data-native-menu="false">
+                            <option>Choose Card</option>
+                            <option value="1">Card 1st</option>
+                            <option value="2">Card 2nd</option>
+                            <option value="3">Card 3rd</option>
+                            <option value="4">Card 4th</option>
+                        </select>
+                    </div>
+
+
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a href="#" onclick="pretab()" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Previous</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#" onclick="nexttab()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Next</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div id="four">
+                <h1>Category</h1>
+                <form class="userform">
+
+                    <div class="ui-field-contain">
+                        <label for="selectmul-categorys">Category Preference:</label>
+                        <select name="selectmul-categorys" id="selectmul-categorys" multiple="multiple" data-native-menu="false">
+                            <option>Choose options</option>
+                            <option value="1">The 1st Category</option>
+                            <option value="2">The 2nd Category</option>
+                            <option value="3">The 3rd Category</option>
+                            <option value="4">The 4th Category</option>
+                        </select>
+                    </div>
+
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a href="#" onclick="pretab()" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Previous</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#" onclick="nexttab()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Next</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div id="five">
+                <h1>Add Location</h1>
+                <!--<form class="userform">
+
+                    <label>Default Home Location:</label>
+                    <input type="button" onclick="getposition()" value="Set Current Location">
+                    <h3 style="text-align: -webkit-center;">Or</h3>
+                    <input type="button" value="Open map" onclick="$( '#home_select_map' ).popup( 'open', { overlayTheme: 'a',corners: true , positionTo:'window' } );">
+
+                    
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a href="#" onclick="pretab()" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Previous</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#" onclick="nexttab()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Next</a>
+                        </div>
+                    </div>
+
+                </form>-->
+
+
+
+
+                <div data-role="main" class="ui-content">
+
+                    <div class="content-primary">
+                        <form>
+                            <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                                <li data-role="fieldcontain" class="ui-field-contain ui-body ui-br ui-li ui-li-static ui-btn-up-c ui-corner-top">
+
+                                    <label for="loc_slider" id="loc_slider-label" class="ui-slider" style="width: 50%;">How to Add Location:</label>
+
+                                    <select name="loc_slider" id="loc_slider" data-role="slider" class="ui-slider-switch" style="width:101px;">
+                                        <option value="map">Map</option>
+                                        <option value="gps">GPS</option>
+                                    </select>
+
+                                </li>
+
+
+                                <li data-role="fieldcontain" class="ui-field-contain ui-body ui-br ui-li ui-li-static ui-btn-up-c">
+                                    <fieldset data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal">
+                                        <a id="btn_loc_gps" onclick="add_loc_getposition()" href="#" data-role="button" style="width: 100%;" class="ui-disabled">Location From GPS</a>
+                                        <!--<a href="#" data-role="button">Open Map</a>-->
+                                    </fieldset>
+
+                                </li>
+
+                                <li data-role="fieldcontain" class="ui-field-contain ui-body ui-br ui-li ui-li-static ui-btn-up-c">
+                                    <fieldset data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal">
+                                        <!-- <a href="#" data-role="button" data-corners="true">Location From GPS</a>-->
+                                        <a id="btn_addloc_map" onclick="$( '#location_select_map' ).popup( 'open', { overlayTheme: 'a',corners: true , positionTo:'window' } );" href="#" data-role="button" data-inline="false" style="width: 100%;">Open Map</a>
+                                    </fieldset>
+
+                                </li>
+
+                                <li data-role="fieldcontain" class="ui-field-contain ui-body ui-br ui-li ui-li-static ui-btn-up-c">
+                                    <label for="loc_name" class="ui-input-text" style="border-width: 0px;width: 50%;">Name Of Location:</label>
+                                    <input type="text" name="loc_name" id="loc_name" value="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                </li>
+
+                                <li data-role="fieldcontain" class="ui-field-contain ui-body ui-br ui-li ui-li-static ui-btn-up-c">
+                                    <label for="loc_latlng" class="ui-input-text" style="border-width: 0px;width: 50%;">Location:</label>
+                                    <input type="text" name="loc_latlng" id="loc_latlng" disabled="disabled" value="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+                                </li>
+
+                                <li class="ui-body ui-body-b ui-li ui-li-static ui-btn-up-c ui-corner-bottom ui-li-last">
+                                    <fieldset>
+                                        <a href="#" data-role="button" onclick="save_loc()">Add</a>
+                                    </fieldset>
+                                </li>
+
+                            </ul>
+
+
+
+                        </form>
+
+                    </div>
+
+                    <!--Map for select location-->
+                    <div data-role="popup" id="location_select_map" data-overlay-theme="a">
+
+                        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
+                        <iframe src="map.html" width="480" height="320" seamless></iframe>
+                        <a href="#" data-rel="back" onclick="add_location_temp()" data-role="button" data-theme="a" data-icon="plus" data-iconpos="notext" class="ui-btn-left">Add</a>
+
+                    </div>
+                    <!--End Map for location-->
+
+                </div>
+
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a href="#" onclick="pretab()" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Previous</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#" onclick="nexttab()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Next</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="six">
+                <h1>Notification Alert</h1>
+                <form class="userform" id="from_alert">
+
+
+                    <!--Can do a global “Alert Allowed” or as per Category setting or Off-->
+
+                    <!--<fieldset data-role="controlgroup">
+                        <legend>Alert:</legend>
+                        <input type="radio" name="radio-alert-v-2" id="radio-alert-v-2a" value="on" onclick="radio_alert(on)">
+                        <label for="radio-alert-v-2a">On</label>
+                        <input type="radio" name="radio-alert-v-2" id="radio-alert-v-2b" value="category" onclick="radio_alert(category)">
+                        <label for="radio-alert-v-2b">As per Category</label>
+                        <input type="radio" name="radio-alert-v-2" id="radio-alert-v-2c" value="off" onclick="radio_alert(off)">
+                        <label for="radio-alert-v-2c">Off</label>
+                    </fieldset>-->
+
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Alert:</legend>
+                        <input type="radio" name="radio-alert-h-2" id="radio-alert-h-2a" value="on" onclick="radio_alert('on')">
+                        <label for="radio-alert-h-2a">On</label>
+                        <input type="radio" name="radio-alert-h-2" id="radio-alert-h-2b" value="category" onclick="radio_alert('category')">
+                        <label for="radio-alert-h-2b">As per Category</label>
+                        <input type="radio" name="radio-alert-h-2" id="radio-alert-h-2c" value="off" onclick="radio_alert('off')">
+                        <label for="radio-alert-h-2c">Off</label>
+                    </fieldset>
+
+                    <!--Options available are:
+1.Lunch/Dinner/Party-->
+
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Options:</legend>
+                        <input type="radio" name="radio-alert-opt-h-2" id="radio-alert-opt-h-2a" value="lunch" onclick="radio_alert_option('on')">
+                        <label for="radio-alert-opt-h-2a">Lunch</label>
+
+                        <input type="radio" name="radio-alert-opt-h-2" id="radio-alert-opt-h-2b" value="dinner" onclick="radio_alert_option('category')">
+                        <label for="radio-alert-opt-h-2b">Dinner</label>
+
+                        <input type="radio" name="radio-alert-opt-h-2" id="radio-alert-opt-h-2c" value="party" onclick="radio_alert_option('off')">
+                        <label for="radio-alert-opt-h-2c">Party</label>
+
+                        <input type="radio" name="radio-alert-opt-h-2" id="radio-alert-opt-h-2d" value="time" onclick="radio_alert_option('time')">
+                        <label for="radio-alert-opt-h-2d">Time Slot</label>
+                    </fieldset>
+
+
+
+                    <label for="time_slot">Time slot(24hr):</label>
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <input type="text" name="time_slot" id="time_start" value="">
+                        </div>
+                        <div class="ui-block-b">
+                            <label for="time_slot" style="text-align: -webkit-center">To</label>
+                        </div>
+                        <div class="ui-block-c">
+                            <input type="text" name="time_slot" id="time_end" value="">
+                        </div>
+                    </div>
+
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a href="#" onclick="pretab()" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Previous</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#mainpage" onclick="save_setup();" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Save</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- <div id="three" class="ui-body-d ui-content">
+                <h1>User settings</h1>
+                <form class="userform">
+
+                    <div class="ui-field-contain">
+                        <label for="selectmul-categorys">Category Preference:</label>
+                        <select name="selectmul-categorys" id="selectmul-categorys" multiple="multiple" data-native-menu="false">
+                            <option>Choose options</option>
+                            <option value="1">The 1st Category</option>
+                            <option value="2">The 2nd Category</option>
+                            <option value="3">The 3rd Category</option>
+                            <option value="4">The 4th Category</option>
+                        </select>
+                    </div>
+                    <h2>Alert</h2>
+                    <fieldset data-role="controlgroup">
+                        <legend>Alert Options:</legend>
+                        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="0" checked="checked">
+                        <label for="radio-choice-v-2a">Once Only</label>
+                        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="1">
+                        <label for="radio-choice-v-2b">Repeat Every x minutes/hrs</label>
+
+                    </fieldset>
+
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#mainpage" onclick="save_setup();" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Save</a>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>-->
+
+
+        </div>
+
+
+        <!--Map for select home location-->
+        <div data-role="popup" id="home_select_map" data-overlay-theme="a">
+
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
+            <iframe src="map.html" width="480" height="320" seamless></iframe>
+            <a href="#" data-rel="back" onclick="set_home_location()" data-role="button" data-theme="a" data-icon="plus" data-iconpos="notext" class="ui-btn-left">Add</a>
+
+        </div>
+        <!--End Map for home location-->
+
+    </div>
+    <!--End Startup info page-->
+
+
+
+    <!--Map page-->
+
+    <div data-role="page" id="mapage">
+
+
+        <div class="content-heading" id="mapheader">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <div style="margin: auto;display: -webkit-inline-box;margin-top: 9px;">Map</div><span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+            </div>
+
+        </div>
+
+
+        <div data-role="main">
+            <!--<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map-canvas"></div>-->
+
+
+            <div id="ifram_map" data-overlay-theme="a" style="height: 80%">
+
+                <!--<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>-->
+
+                <iframe src="map.html" width="100%" height="75%" seamless></iframe>
+
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-bottom ui-btn-right" style="margin-top: 51px;border: none;">close</a>
+            </div>
+
+        </div>
+
+
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed" id="mapnavi">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img height="50px" src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img height="50px" src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img height="50px" src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img height="50px" src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!--End Footer Menu-->
+
+
+    </div>
+
+
+    <!--End Map page-->
+
+
+
+    <!--Display position on Map page-->
+
+    <div data-role="page" id="dispmapg">
+
+
+        <div class="content-heading" id="mapheader">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div id="disp_location_header">Map</div>
+            </div>
+
+        </div>
+
+
+        <div data-role="main">
+            <!--<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map-canvas"></div>-->
+
+
+            <div id="ifram_map" data-overlay-theme="a" style="height: 80%">
+
+                <!--<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>-->
+
+                <iframe id="disp_map_iframe" src="disp_on_map.html" width="100%" height="75%" seamless></iframe>
+
+                <!--<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-bottom ui-btn-right" style="margin-top: 51px;border: none;">close</a>-->
+            </div>
+
+        </div>
+
+
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed" id="dmapnavi">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img height="50px" src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img height="50px" src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img height="50px" src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img height="50px" src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!--End Footer Menu-->
+
+
+    </div>
+
+    <!--Display position on Map page End-->
+
+
+
+
+    <!--Current position on Map page-->
+
+    <div data-role="page" id="currentmapg">
+
+
+        <div class="content-heading" id="currentmapheader">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div id="current_location_header">Current Location</div>
+            </div>
+
+        </div>
+
+
+        <div data-role="main">
+
+            <div id="current_ifram_map" data-overlay-theme="a" >
+
+                <iframe id="current_map_iframe" src="map_current_location.html" width="100%" seamless></iframe>
+
+            </div>
+
+        </div>
+
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed" id="cmapnavi">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img height="50px" src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img height="50px" src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img height="50px" src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img height="50px" src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!--End Footer Menu-->
+
+
+    </div>
+
+    <!--Current position on Map page End-->
+
+    <!--Add new item to shopping list-->
+
+    <div data-role="page" id="addtolist">
+
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div>Add to Shopping List</div>
+            </div>
+
+        </div>
+
+
+        <div data-role="main">
+
+            <br>
+            <!--<div class="select-div">-->
+                <div class="category-h">Select Shopping List to add</div>
+
+                <span class="custom-dropdown custom-dropdown--white">
+                            <select id="select_shop_list" class="custom-dropdown__select custom-dropdown__select--white" data-role="none">
+                        <option value="">Shopping List</option>
+                        <option value="">Shopping List1</option>
+                        <option value="">Shopping List2</option>
+                        <option value="">Shopping List3</option>
+                        <option value="">Shopping List4</option>
+                        <option value="">Shopping List5</option>
+                            </select>
+                        </span>
+            <!--</div>-->
+
+            <br>
+            <a href="#" onclick="add_item_to_selected_list();" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Add To List</a>
+            <br>
+            <a href="#add_new_shopping_list" onclick="$.mobile.changePage('#add_new_shopping_list')" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Create New List</a>    
+        </div>
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img height="50px" src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img height="50px" src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img height="50px" src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img height="50px" src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!--End Footer Menu-->
+
+
+    </div>
+
+    <!-- End Add to shopping list page-->
+
+
+
+
+    <!--Add_new_shopping_list page-->
+
+    <div data-role="page" id="add_new_shopping_list">
+
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div>Add New Shopping List</div>
+            </div>
+
+        </div>
+
+
+        <div data-role="main">
+
+            <br>
+            <div class="category-h">Shopping List Name</div>
+            <input type="text" id="list_name" value="" style="border-radius: 25px;">
+
+
+            <a href="#" onclick="add_new_shp_list();" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Add List</a>
+
+        </div>
+
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img height="50px" src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img height="50px" src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img height="50px" src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img height="50px" src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!--End Footer Menu-->
+
+
+    </div>
+
+    <!--Add_new_shopping_list page End-->
+
+    <!--Show list page-->
+
+    <div data-role="page" id="show_shopping_list">
+
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div>Shopping List</div>
+            </div>
+
+        </div>
+
+
+        <div data-role="main">
+
+            <div class="main-screen-out-div">
+
+                <div class="select-main-search">
+
+                    <div id="toggle-view-list">
+                        <!-- <li class="shp_list_li">
+                            <h3 class="shp_list_h3">List 1</h3>
+                            <span class="shp_list_span"><img src="img/arrow-se-1.png"></span>
+                            <div>
+                                <p class="shp_list_p"> </p>
+                            </div>
+                        </li>
+                        <li class="shp_list_li">
+                            <h3 class="shp_list_h3">Shopping List</h3>
+                            <span class="shp_list_span"><img src="img/arrow-se-1.png"></span>
+                            <div>
+                                <p class="shp_list_p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.</p>
+                            </div>
+                        </li>
+                        <li class="shp_list_li">
+                            <h3 class="shp_list_h3">My List</h3>
+                            <span class="shp_list_span"><img src="img/arrow-se-1.png"></span>
+                            <div>
+                                <p class="shp_list_p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.</p>
+                            </div>
+                        </li>-->
+                    </div>
+
+
+
+                    <div class="what-btn">
+                        <div class="icon">
+                            <a href="#" onclick="show_list_in_edit()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Edit List</a>
+                            <!--<img src="img/reset-btn.png">-->
+                        </div>
+                    </div>
+                    <div class="what-btn-1">
+                        <div class="icon-1">
+                            <a href="#add_new_shopping_list" onclick="$.mobile.changePage('#add_new_shopping_list')" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Add New List</a>
+                            <!--                            <img src="img/reset-btn-2.png">-->
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img height="50px" src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img height="50px" src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img height="50px" src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img height="50px" src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!--End Footer Menu-->
+
+
+    </div>
+
+    <!--Show list page End-->
+
+
+
+
+    <!--Edit shopping list page-->
+
+    <div data-role="page" id="edit_shopping_list">
+
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div>Edit Shopping List</div>
+            </div>
+
+        </div>
+
+
+        <div data-role="main">
+
+            <ul id="edit_shp_ul" data-role="listview">
+                <li id="li1">list 1
+
+                    <a href="#" onclick='delete_list(this)' class="delete">Delete</a>
+                </li>
+                <li>List 2
+
+                    <a href="#" onclick='delete_list(this)' class="delete">Delete</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img height="50px" src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img height="50px" src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img height="50px" src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img height="50px" src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!--End Footer Menu-->
+
+
+    </div>
+
+    <!--Edit shopping list page End-->
+
+
+    <!--Edit list items page-->
+
+    <div data-role="page" id="edit_shopping_list_items">
+
+
+        <div class="content-heading">
+            <div class="heading-text">
+                <span class="top-hd-left-icon"><img src="img/slifeg-logo.png"></span> 
+                <span class="top-hd-right-icon"><a href="#menu"><img src="img/diveder-icon.png"></a></span>
+                <span class="top-hd-right-icon"><img onclick="$.mobile.changePage('#search')" src="img/serach-icon.png"></span>
+                <div id="edit_shp_list_titel">Edit Shopping List</div>
+            </div>
+
+        </div>
+
+
+        <div data-role="main">
+
+            <div class="main-screen-out-div">
+
+                <div class="select-main-search">
+
+                    <div id="view_list_items">
+
+
+                    </div>
+
+
+
+                    <!--<div class="what-btn">
+                        <div class="icon">
+                            <a href="#" onclick="show_list_in_edit()" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Edit List</a>
+                        </div>
+                    </div>
+                    <div class="what-btn-1">
+                        <div class="icon-1">
+                            <a href="#add_new_shopping_list" onclick="$.mobile.changePage('#add_new_shopping_list')" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Add New List</a>
+                        </div>
+                    </div>-->
+                </div>
+                <div class="clear"></div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="navi" data-role='footer' data-tap-toggle='false' data-position="fixed">
+            <div class="nav">
+                <ul>
+                    <li id="m1"><a href="#" onclick="$.mobile.changePage('#mainpage')"><strong><img height="50px" src="img/home-icon-no-1.png" /></strong></a>
+                    </li>
+                    <li id="m2"><a href="#" onclick="$.mobile.changePage('#show_shopping_list')"><strong><img height="50px" src="img/home-icon-no-2.png" /></strong></a>
+                    </li>
+                    <li id="m3"><a href="#" onclick="update_data()"><strong><img height="50px" src="img/home-icon-no-3.png" /></strong></a>
+                    </li>
+                    <li id="m4"><a href="#" onclick="$.mobile.changePage('#currentmapg')"><strong><img height="50px" src="img/home-icon-no-4.png" /></strong></a>
+                    </li>
+                    <li id="m5"><a href="#" onclick='scanCode()'><strong><img height="50px" src="img/home-icon-no-5.png" /></strong></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!--End Footer Menu-->
+
+
+    </div>
+
+    <!--Edit list items page End-->
+
+
+
+    <!--Menu-->
+    <nav id="menu" style="z-index: 10000;">
+        <ul id="ul_menu" data-role="listview" data-inset="true" data-divider-theme="b">
+            <li>
+                <a href="#mainpage"></a>
+            </li>
+            <li>
+                <a href="#mainpage" onclick="$.mobile.changePage('#mainpage')">Home</a>
+            </li>
+            <li>
+                <a onclick="scanCode()" href="#">Barcode</a>
+            </li>
+            <li>
+                <a href="#registerpage" onclick="$.mobile.changePage('#registerpage')">Sign Up</a>
+            </li>
+            <li>
+                <a href="#loginpage" onclick="$.mobile.changePage('#loginpage')">Login</a>
+            </li>
+            <li data-role="list-divider" id="menu_list_li_categories">categories</li>
+            <li>
+                <a href="#mainpage" onclick="$.mobile.changePage('#mainpage')">Womens</a>
+            </li>
+            <li>
+                <a href="#mainpage" onclick="$.mobile.changePage('#mainpage')">Mens</a>
+            </li>
+            <li>
+                <a href="#fashion_page" onclick="$.mobile.changePage('#fashion_page')">Features</a>
+            </li>
+            <li>
+                <a href="#mainpage" onclick="$.mobile.changePage('#mainpage')">Brands</a>
+            </li>
+            <li data-role="list-divider">Other</li>
+            <li>
+                <a href="#mainpage" onclick="$.mobile.changePage('#mainpage')">Point</a>
+            </li>
+            <li>
+                <a href="#tspecial" onclick="$.mobile.changePage('#tspecial')">Discount</a>
+            </li>
+            <li>
+                <a href="#mainpage" onclick="$.mobile.changePage('#mainpage')">Notification</a>
+            </li>
+            <li>
+                <a href="#listingpage" onclick="$.mobile.changePage('#listingpage')">LBS</a>
+            </li>
+            <li>
+                <a href="#mainpage" onclick="$.mobile.changePage('#mainpage')">All cards</a>
+            </li>
+        </ul>
+
+    </nav>
+    <!--End menu-->
+
+</body>
+
+</html>

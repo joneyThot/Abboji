@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.abooji"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="22" />
+
+    <permission
+        android:name="com.android.abooji.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.android.abooji.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/CustomActivityTheme" >
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.abooji.Login_RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.abooji.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.abooji.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.abooji.PersonalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.abooji.CardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.abooji.CategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.abooji.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.abooji.NotificationAlertActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.abooji.StartHereActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.abooji.DashboardRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.abooji.DashboardLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dm.zbar.android.scanner.ZBarScannerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBRFM-Y4cdsDtd2x1-duETABY012RdcqcM" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

@@ -1,0 +1,242 @@
+<!--Swiper Slider-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ads</title>
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+  <style>
+/* Demo Styles */
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  position: relative;
+  height: 100%;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+.red-slide {
+  background: #ca4040;
+}
+.blue-slide {
+  background: #4390ee;
+}
+.orange-slide {
+  background: #ff8604;
+}
+.green-slide {
+  background: #49a430;
+}
+.pink-slide {
+  background: #973e76;
+}
+.swiper-slide .title {
+  font-style: italic;
+  font-size: 25px;
+  margin-top: 0px;
+  margin-bottom: 0;
+  line-height: 26px;
+}
+.pagination {
+  position: absolute;
+  z-index: 20;
+  left: 10px;
+  bottom: 10px;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #222;
+  margin-right: 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-visible-switch {
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+  </style>
+</head>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper" id="ads_slides">
+      <!--<div class="swiper-slide red-slide">
+        <div>Slide 1<img src="img/big/1.png" alt="Picture" style="height: 100vh;width: 100vw;"/></div>
+      </div>
+      <div class="swiper-slide blue-slide">
+        <div>Slide 2<img src="img/big/2.png" alt="Picture" style="height: 100vh;width: 100vw;"/></div>
+      </div>
+      <div class="swiper-slide orange-slide">
+        <div>Slide 3<img src="img/big/3.png" alt="Picture" style="height: 100vh;width: 100vw;"/></div>
+      </div>
+      <div class="swiper-slide green-slide">
+        <div>Slide 4<img src="img/big/4.jpg" alt="Picture" style="height: 100vh;width: 100vw;"/></div>
+      </div>
+      <div class="swiper-slide pink-slide">
+        <div>Slide 5<img src="img/big/5.png" alt="Picture" style="height: 100vh;width: 100vw;"/></div>
+      </div>
+      <div class="swiper-slide red-slide">
+        <div>Slide 6<img src="img/big/banner.png" alt="Picture" style="height: 100vh;width: 100vw;"/></div>
+      </div>
+      <div class="swiper-slide blue-slide">
+        <div class="title">Slide 7</div>
+      </div>
+      <div class="swiper-slide orange-slide">
+        <div class="title">Slide 8</div>
+      </div>-->
+    </div>
+    <div class="pagination"></div>
+  </div>
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="js/idangerous.swiper-2.1.min.js"></script>
+  <script>
+ var imageUrl = "http://108.163.162.132/abooji/uploads/discount/";
+ var url = "http://108.163.162.132/abooji/abooji_webservice/" + 'adverts.php';
+
+    $.post(url, function (myData) {
+        //console.warn(myData);
+        var adverts_data = myData.advrts;
+        //console.info("Adverts");
+        //console.log(adverts_data);
+        
+        var output = "";
+    for (var i in adverts_data) {
+        var img;
+        if(adverts_data[i].offer_image)
+        {
+            img = imageUrl + adverts_data[i].offer_image;
+        }
+        else
+        {
+            img = "img/imageNotFound.jpg";
+        }
+
+        output += '<div class="swiper-slide orange-slide"><div class="title">'+adverts_data[i].title+'<img src="' + img + '" alt="Picture" style="height: 100%;width: 100%;"/></div></div>';
+        
+        if (i > 8) {
+            break;
+        }
+    }
+    
+    $('#ads_slides').append(output);
+        
+         var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    paginationClickable: true
+  });
+    }, 'json');
+      
+  </script>
+</body>
+</html>
+
+<!--End Swiper slider-->
+
+
+
+
+
+
+
+
+
+
+<!--Glide Slider-->
+
+<!--<!doctype html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="css/glidestyle.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.glide.js"></script>
+    <style>
+			*{ margin: 0; padding: 0; border: 0; }
+
+			.box {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+</head>
+<body>
+    <div class="slider">
+			<ul class="slides" id="ads_slides">-->
+                
+                
+				<!--<li class="slide"><div class="box" style="background-color: #1abc9c;"><img src="img/ad.png" alt="Picture" style="height: 100vh;width: 100vw;" /></div></li>
+				<li class="slide"><div class="box" style="background-color: #16a085;"><img src="img/big/1.png" alt="Picture" style="height: 100vh;width: 100vw;" /></div></li>
+				<li class="slide"><div class="box" style="background-color: #f1c40f;"><img src="img/big/2.png" alt="Picture" style="height: 100vh;width: 100vw;" /></div></li>
+				<li class="slide"><div class="box" style="background-color: #f39c12;"><img src="img/ad.png" alt="Picture" style="height: 100vh;width: 100vw;" /></div></li>
+				<li class="slide"><div class="box" style="background-color: #d35400;"><img src="img/big/1.png" alt="Picture" style="height: 100vh;width: 100vw;" /></div></li>
+				<li class="slide"><div class="box" style="background-color: #c0392b;"><img src="img/big/2.png" alt="Picture" style="height: 100vh;width: 100vw;" /></div></li>-->
+                
+                
+                
+			<!--</ul>
+		</div>
+
+    <script>
+            
+var imageUrl = "http://108.163.162.132/abooji/uploads/discount/";
+ var url = "http://108.163.162.132/abooji/abooji_webservice/" + 'adverts.php';
+
+    $.post(url, function (myData) {
+        //console.warn(myData);
+        var adverts_data = myData.advrts;
+        console.info("Adverts");
+        console.log(adverts_data);
+        
+        var output = "";
+    for (var i in adverts_data) {
+        var img = imageUrl + adverts_data[i].offer_image;
+        output += '<li><img src="' + img + '" alt="Picture" style="height: 100vh;width: 100vw;" /></li>';
+
+        if (i > 8) {
+            break;
+        }
+    }
+    
+    $('#ads_slides').append(output);
+        
+        var glide = $('.slider').glide({
+					afterTransition: function() {
+						var currentSlide = this.currentSlide;
+						console.log(currentSlide);
+					},
+                touchDistance: 41,
+                arrows: false
+				}).data('api_glide');
+
+				$(window).on('keyup', function (key) {
+					if (key.keyCode === 13) {
+						glide.jump(3, console.log('Wooo!'));
+					};
+				});
+
+				$('.slider-arrow').on('click', function() {
+					console.log(glide.current());
+				});
+    }, 'json');
+            
+            
+			
+		</script>
+</body>
+
+</html>-->

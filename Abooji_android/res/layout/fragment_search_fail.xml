@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.android.abooji.view.TextViewPlus
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/activity_padding"
+        android:text="Sorry"
+        android:textSize="@dimen/h_5"
+        app:customFont="@string/font_normal" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/black"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/activity_padding" >
+
+        <com.android.abooji.view.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:text="Your Selected criteria are too board.\n"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/h_3"
+            app:customFont="@string/font_bold" />
+
+        <com.android.abooji.view.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="left"
+            android:text="Tips to help find what you want:\n\nBe specific in at least one criteria.\n\nMake sure the keyword are spelled correctly.\n\nChoose fewer of different keywords."
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/h_6"
+            app:customFont="@string/font_normal" />
+    </LinearLayout>
+
+</LinearLayout>

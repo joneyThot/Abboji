@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding" >
+
+            <com.android.abooji.view.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/location"
+                android:textSize="@dimen/h_1"
+                app:customFont="@string/font_bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="vertical" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location_string"
+                    android:textSize="@dimen/h_7"
+                    app:customFont="@string/font_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_5" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location_enable_current_gps_location"
+                    android:textSize="@dimen/h_5"
+                    app:customFont="@string/font_normal" />
+
+                <ToggleButton
+                    android:id="@+id/location_toggle_yes_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:textOff="@string/location_toogle_No"
+                    android:textOn="@string/location_toogle_yes" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_5" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/location_how_to_add_location"
+                    android:textSize="@dimen/h_5"
+                    app:customFont="@string/font_normal" />
+
+                <ToggleButton
+                    android:id="@+id/location_toggle_gps_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:textOff="@string/location_toogle_map"
+                    android:textOn="@string/location_toogle_gps" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_5" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:id="@+id/activity_location_from_gps_btn"
+                    style="@style/ButtonTextStyle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location_from_gps" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_5" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:id="@+id/activity_location_open_map_btn"
+                    style="@style/ButtonTextStyle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location_open_map" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_5" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/location_name_of_location"
+                    android:textSize="@dimen/h_5"
+                    app:customFont="@string/font_normal" />
+
+                <EditText
+                    android:id="@+id/activity_name_of_location_edittxt"
+                    style="@style/WhiteBackEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_padding"
+                    android:textCursorDrawable="@drawable/cursor_color" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_5" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/location_txt"
+                    android:textSize="@dimen/h_5"
+                    app:customFont="@string/font_normal" />
+
+                <EditText
+                    android:id="@+id/activity_location_edittxt"
+                    style="@style/WhiteBackEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_padding"
+                    android:textCursorDrawable="@drawable/cursor_color" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_5" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:id="@+id/activity_location_add_btn"
+                    style="@style/ButtonTextStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location_add" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:id="@+id/activity_location_prev_btn"
+                    style="@style/ButtonTextStyle2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:layout_weight="1"
+                    android:text="@string/location_prev" />
+
+                <com.android.abooji.view.TextViewPlus
+                    android:id="@+id/activity_location_next_btn"
+                    style="@style/ButtonTextStyle2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_weight="1"
+                    android:text="@string/location_next" />
+            </LinearLayout>
+
+            <com.android.abooji.view.TextViewPlus
+                android:id="@+id/activity_location_save_btn"
+                style="@style/ButtonTextStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:text="@string/location_save" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

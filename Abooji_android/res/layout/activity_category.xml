@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding" >
+
+            <com.android.abooji.view.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/category"
+                android:textSize="@dimen/h_1"
+                app:customFont="@string/font_bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="vertical" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_string"
+                    android:textSize="@dimen/h_7"
+                    app:customFont="@string/font_normal" />
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:padding="@dimen/activity_padding"
+                    android:text="@string/category_preference"
+                    android:textSize="@dimen/h_5"
+                    app:customFont="@string/font_normal" />
+
+                <com.android.abooji.view.TextViewPlus
+                    android:id="@+id/activity_category_preference_edittxt"
+                    style="@style/WhiteBackEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:padding="@dimen/activity_padding"
+                    android:textSize="@dimen/h_5" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/input_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <com.android.abooji.view.TextViewPlus
+                        android:id="@+id/activity_category_prev_btn"
+                        style="@style/ButtonTextStyle2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:text="@string/category_prev" />
+
+                    <com.android.abooji.view.TextViewPlus
+                        android:id="@+id/activity_category_next_btn"
+                        style="@style/ButtonTextStyle2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:text="@string/category_next" />
+                </LinearLayout>
+
+                <com.android.abooji.view.TextViewPlus
+                    android:id="@+id/activity_category_save_btn"
+                    style="@style/ButtonTextStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_padding"
+                    android:text="@string/category_save" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

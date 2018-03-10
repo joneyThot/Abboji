@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <title>Map</title>
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+    <script>
+        /*initialize map*/
+
+        var map, marker, infowindow;
+
+
+        function initialize_map() {
+
+            var mapOptions = {
+                zoom: 3,
+                center: new google.maps.LatLng(23.027381, 72.580342),
+                disableDefaultUI: true
+            };
+
+
+
+            infowindow = new google.maps.InfoWindow({
+                content: 'Drop point info',
+            });
+            map = new google.maps.Map(document.getElementById('map-canvas'),
+                mapOptions);
+
+
+            // Create the search box and link it to the UI element.
+            var input = /** @type {HTMLInputElement} */ (
+                document.getElementById('pac-input'));
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+            var searchBox = new google.maps.places.SearchBox(
+                /** @type {HTMLInputElement} */
+                (input));
+
+
+
+           
+            /*map_center=map.getCenter().toString();
+    console.info("map_center"+map_center);*/
+            // [START region_getplaces]
+            // Listen for the event fired when the user selects an item from the
+            // pick list. Retrieve the matching places for that item.
+            google.maps.event.addListener(searchBox, 'places_changed', function () {
+                var places = searchBox.getPlaces();
+
+                if (places.length == 0) {
+                    return;
+                }
+                /* for (var i = 0, marker; marker = markers[i]; i++) {
+      marker.setMap(null);
+    }*/
+
+                // For each place, get the icon, place name, and location.
+                //markers = [];
+                var bounds = new google.maps.LatLngBounds();
+                for (var i = 0, place; place = places[i]; i++) {
+                    var image = {
+                        url: place.icon,
+                        size: new google.maps.Size(71, 71),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34),
+                        scaledSize: new google.maps.Size(25, 25)
+                    };
+
+                    // Create a marker for each place.
+                    //      var marker = new google.maps.Marker({
+                    //        map: map,
+                    //        icon: image,
+                    //        title: place.name,
+                    //        position: place.geometry.location
+                    //      });
+                    //
+                    //      markers.push(marker);
+
+                    bounds.extend(place.geometry.location);
+                }
+
+                map.fitBounds(bounds);
+                map.setZoom(12);
+            });
+            // [END region_getplaces]
+
+            // Bias the SearchBox results towards places that are within the bounds of the
+            // current map's viewport.
+            google.maps.event.addListener(map, 'bounds_changed', function () {
+                var bounds = map.getBounds();
+                searchBox.setBounds(bounds);
+            });
+
+
+
+        }
+        google.maps.event.addDomListener(window, 'load', initialize_map);
+
+
+        function current_opsition()
+        {
+         // onSuccess Callback receives a PositionError object
+        var getposSuccess = function (position) {
+                    /*alert('Latitude: ' + position.coords.latitude + '\n' +
+            'Longitude: ' + position.coords.longitude + '\n' +
+            'Altitude: ' + position.coords.altitude + '\n' +
+            'Accuracy: ' + position.coords.accuracy + '\n' +
+            'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '\n' +
+            'Heading: ' + position.coords.heading + '\n' +
+            'Speed: ' + position.coords.speed + '\n' +
+            'Timestamp: ' + position.timestamp + '\n');*/
+            var pos = new google.maps.LatLng(position.coords.latitude,
+                position.coords.longitude);
+            map.setCenter(pos);
+            map.setZoom(12);
+            // placeMarker(pos, map);
+            /*localStorage.setItem('latitude', position.coords.latitude);
+        localStorage.setItem('longitude', position.coords.longitude);*/
+
+        };
+
+         // onError Callback receives a PositionError object
+        function posonError(error) {
+            console.error('code: ' + error.code + '\n' +
+                'message: ' + error.message + '\n');
+        }
+
+        navigator.geolocation.getCurrentPosition(getposSuccess, posonError);
+        }
+
+
+        /*create marker*/
+        function placeMarker(position, map) {
+            marker = new google.maps.Marker({
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position: position
+            });
+            google.maps.event.addListener(marker, 'dragend', function () {
+                geocodePosition(marker.getPosition());
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map);
+            });
+
+            localStorage.setItem('current_pos', position);
+
+        }
+
+         // Removes the markers from the map, but keeps them in the array.
+        function clearMarkers() {
+            setAllMap(null);
+        }
+
+         // Deletes all markers in the array by removing references to them.
+        function deleteMarkers() {
+            //clearMarkers();
+            marker.setMap(null);
+        }
+
+         // Sets the map on all markers in the array.
+        function setAllMap(map) {
+            for (var i = 0; i < marker.length; i++) {
+                marker[i].setMap(map);
+            }
+        }
+
+        /*Function for fiend geo position info*/
+        function geocodePosition(pos) {
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+                    latLng: pos
+                },
+                function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        infowindow.setContent(results[0].formatted_address);
+                        infowindow.setPosition(marker.getPosition());
+//                        localStorage.setItem('current_pos', pos);
+//                        localStorage.setItem('tmp_loc_name', results[0].formatted_address);
+                        /* $("#mapSearchInput").val(results[0].formatted_address);
+                $("#mapErrorMsg").hide(100);*/
+                    } else {
+                        /*$("#mapErrorMsg").html('Cannot determine address at this location.' + status).show(100);*/
+                    }
+                }
+            );
+        }
+        /*End geocordposition Function*/
+
+
+
+        /*function set_home_location() {
+    var home_LatLng = marker.getPosition();
+    console.info("Home Location: " + home_LatLng);
+    localStorage.setItem('home_location', home_LatLng);
+}*/
+
+
+
+        $(document).on("pageinit", function () {
+            $("#home_select_map iframe")
+                .attr("width", 0)
+                .attr("height", 0);
+
+            $("#home_select_map iframe").contents().find("#map-canvas")
+                .css({
+                    "width": 0,
+                    "height": 0
+                });
+
+            $("#home_select_map").on({
+                popupbeforeposition: function () {
+                    var size = scale(480, 320, 0, 1),
+                        w = size.width,
+                        h = size.height;
+
+                    $("#home_select_map iframe")
+                        .attr("width", w)
+                        .attr("height", h);
+
+                    $("#home_select_map iframe").contents().find("#map-canvas")
+                        .css({
+                            "width": w,
+                            "height": h
+                        });
+                },
+                popupafterclose: function () {
+                    $("#home_select_map iframe")
+                        .attr("width", 0)
+                        .attr("height", 0);
+
+                    $("#home_select_map iframe").contents().find("#map-canvas")
+                        .css({
+                            "width": 0,
+                            "height": 0
+                        });
+                }
+            });
+        });
+
+        function scale(width, height, padding, border) {
+            var scrWidth = $(window).width() - 30,
+                scrHeight = $(window).height() - 30,
+                ifrPadding = 2 * padding,
+                ifrBorder = 2 * border,
+                ifrWidth = width + ifrPadding + ifrBorder,
+                ifrHeight = height + ifrPadding + ifrBorder,
+                h, w;
+
+            if (ifrWidth < scrWidth && ifrHeight < scrHeight) {
+                w = ifrWidth;
+                h = ifrHeight;
+            } else if ((ifrWidth / scrWidth) > (ifrHeight / scrHeight)) {
+                w = scrWidth;
+                h = (scrWidth / ifrWidth) * ifrHeight;
+            } else {
+                h = scrHeight;
+                w = (scrHeight / ifrHeight) * ifrWidth;
+            }
+
+            return {
+                'width': w - (ifrPadding + ifrBorder),
+                'height': h - (ifrPadding + ifrBorder)
+            };
+        };
+
+
+        // This example adds a search box to a map, using the Google Place Autocomplete
+         // feature. People can enter geographical searches. The search box will return a
+         // pick list containing a mix of places and predicted search terms.
+
+        function initialize() {
+
+            var markers = [];
+            //var map = new google.maps.Map(document.getElementById('map-canvas'), {
+            //  mapTypeId: google.maps.MapTypeId.ROADMAP
+            //});
+
+            var defaultBounds = new google.maps.LatLngBounds(
+                new google.maps.LatLng(-33.8902, 151.1759),
+                new google.maps.LatLng(-33.8474, 151.2631));
+            map.fitBounds(defaultBounds);
+
+            // Create the search box and link it to the UI element.
+            var input = /** @type {HTMLInputElement} */ (
+                document.getElementById('pac-input'));
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+            var searchBox = new google.maps.places.SearchBox(
+                /** @type {HTMLInputElement} */
+                (input));
+
+            // [START region_getplaces]
+            // Listen for the event fired when the user selects an item from the
+            // pick list. Retrieve the matching places for that item.
+            google.maps.event.addListener(searchBox, 'places_changed', function () {
+                var places = searchBox.getPlaces();
+
+                if (places.length == 0) {
+                    return;
+                }
+                for (var i = 0, marker; marker = markers[i]; i++) {
+                    marker.setMap(null);
+                }
+
+                // For each place, get the icon, place name, and location.
+                markers = [];
+                var bounds = new google.maps.LatLngBounds();
+                for (var i = 0, place; place = places[i]; i++) {
+                    var image = {
+                        url: place.icon,
+                        size: new google.maps.Size(71, 71),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34),
+                        scaledSize: new google.maps.Size(25, 25)
+                    };
+
+                    // Create a marker for each place.
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        icon: image,
+                        title: place.name,
+                        position: place.geometry.location
+                    });
+
+                    markers.push(marker);
+
+                    bounds.extend(place.geometry.location);
+                }
+
+                map.fitBounds(bounds);
+            });
+            // [END region_getplaces]
+
+            // Bias the SearchBox results towards places that are within the bounds of the
+            // current map's viewport.
+            google.maps.event.addListener(map, 'bounds_changed', function () {
+                var bounds = map.getBounds();
+                searchBox.setBounds(bounds);
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <style>
+        html,
+        body,
+        #map-canvas {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .controls {
+            margin-top: 16px;
+            border: 1px solid transparent;
+            border-radius: 2px 0 0 2px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            height: 32px;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        #pac-input {
+            background-color: #fff;
+            padding: 0 11px 0 13px;
+            width: 34vw;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+            text-overflow: ellipsis;
+        }
+        #pac-input:focus {
+            border-color: #4d90fe;
+            margin-left: -1px;
+            padding-left: 14px;
+            /* Regular padding-left + 1. */
+            width: 401px;
+        }
+        .pac-container {
+            font-family: Roboto;
+        }
+        #type-selector {
+            color: #fff;
+            background-color: #4d90fe;
+            padding: 5px 11px 0px 11px;
+        }
+        #type-selector label {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+        }
+    }
+    </style>
+
+
+
+
+
+</head>
+
+<body onload="parent.current_iframesize();initialize_map();">
+
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map-canvas"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding" >
+
+        <com.android.abooji.view.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email_address_friends"
+            android:textSize="@dimen/h_1"
+            app:customFont="@string/font_normal" />
+
+        <com.android.abooji.view.TextViewPlus
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25"
+            android:text="@string/email_address_text"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/h_6"
+            app:customFont="@string/font_normal" />
+
+        <EditText
+            android:id="@+id/email_address_edit"
+            style="@style/WhiteBackEditTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/activity_padding"
+            android:textCursorDrawable="@drawable/cursor_color" >
+        </EditText>
+
+        <com.android.abooji.view.TextViewPlus
+            android:id="@+id/email_address_save_btn"
+            style="@style/ButtonTextStyle2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:padding="@dimen/margin_5"
+            android:text="@string/email_address_save" />
+    </LinearLayout>
+
+</LinearLayout>

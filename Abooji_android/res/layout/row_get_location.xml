@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <com.android.abooji.view.TextViewPlus
+        android:id="@+id/row_get_location_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/margin_3"
+        android:singleLine="true"
+        android:text="xcvxcv"
+        android:textSize="@dimen/h_5"
+        app:customFont="@string/font_bold" />
+
+    <com.android.abooji.view.TextViewPlus
+        android:id="@+id/row_get_location_remove_btn"
+        style="@style/ButtonTextStyle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/row_get_location_textview"
+        android:background="@drawable/remove" />
+
+</RelativeLayout>

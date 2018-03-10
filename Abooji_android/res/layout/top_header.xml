@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_bg"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <com.android.abooji.view.TextViewPlus
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:background="@drawable/small_logo" />
+
+    <com.android.abooji.view.TextViewPlus
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/margin_5"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/headet_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/h_4"
+        android:visibility="invisible"
+        app:customFont="@string/font_bold" />
+
+    <com.android.abooji.view.TextViewPlus
+        android:id="@+id/search_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_10"
+        android:background="@drawable/serach_icon"
+        android:visibility="visible" />
+
+    <com.android.abooji.view.TextViewPlus
+        android:id="@+id/drawer_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_10"
+        android:background="@drawable/sidemenu_icon"
+        android:gravity="right"
+        android:visibility="visible" />
+</LinearLayout>

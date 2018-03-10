@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_padding" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <com.android.abooji.view.TextViewPlus
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_bg"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/h_6"
+                app:customFont="@string/font_normal" />
+
+            <com.android.abooji.view.TextViewPlus
+                android:id="@+id/activity_login_remove_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/remove"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <com.android.abooji.view.TextViewPlus
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_padding"
+            android:text="@string/login_email"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/h_6"
+            app:customFont="@string/font_normal" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/activity_login_email_edittxt"
+                style="@style/WhiteBackEditTextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:text="hitesh@gmail.com"
+                android:textCursorDrawable="@drawable/cursor_color" >
+            </EditText>
+
+            <com.android.abooji.view.TextViewPlus
+                android:id="@+id/login_removeEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginTop="@dimen/margin_3"
+                android:background="@drawable/remove"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <com.android.abooji.view.TextViewPlus
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_5"
+            android:text="@string/register_password"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/h_6"
+            app:customFont="@string/font_normal" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/activity_login_password_edittxt"
+                style="@style/WhiteBackEditTextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:text="123"
+                android:textCursorDrawable="@drawable/cursor_color" >
+            </EditText>
+
+            <com.android.abooji.view.TextViewPlus
+                android:id="@+id/login_removePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginTop="@dimen/margin_3"
+                android:background="@drawable/remove"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/activity_padding" >
+
+        <com.android.abooji.view.TextViewPlus
+            android:id="@+id/login_Cancel"
+            style="@style/ButtonTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:padding="@dimen/margin_5"
+            android:text="@string/login_cancel"
+            android:textColor="@android:color/white" />
+
+        <com.android.abooji.view.TextViewPlus
+            android:id="@+id/login_ok"
+            style="@style/ButtonTextStyle2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_weight="1"
+            android:padding="@dimen/margin_5"
+            android:text="@string/login" />
+    </LinearLayout>
+
+    <com.android.abooji.view.TextViewPlus
+        android:id="@+id/activity_login_forgot_password_btn"
+        style="@style/ButtonTextStyle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_padding"
+        android:text="@string/login_forgot_password" />
+
+</LinearLayout>

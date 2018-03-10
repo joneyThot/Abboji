@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding" >
+
+        <CheckBox
+            android:id="@+id/item_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding"
+            android:text="@string/edit_location_enable"
+            android:textStyle="bold" />
+
+        <com.android.abooji.view.TextViewPlus
+            android:id="@+id/edit_location_add_btn"
+            style="@style/ButtonTextStyle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:background="@android:color/black"
+            android:padding="@dimen/margin_5"
+            android:text="@string/edit_location_add"
+            android:textColor="@android:color/white" />
+
+        <com.android.abooji.view.TextViewPlus
+            android:id="@+id/edit_location_current_location_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding"
+            android:text="@string/edit_location_current"
+            android:textSize="@dimen/h_5"
+            android:visibility="gone"
+            app:customFont="@string/font_bold" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/listing_bg"
+            android:padding="5dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+{
+    "todays": [
+        {
+            "href": "#",
+            "img": "img/thumb.png",
+            "name": "Gorgeous Dress",
+            "place": "Icon",
+            "cards": "CMB/POSB/DBS",
+            "category": "Fashion",
+            "offer": "1 For 2",
+            "dist": "0.1"
+        },
+        {
+            "href": "#",
+            "img": "img/thumb1.png",
+            "name": "Nice Ware",
+            "place": "Takashimaya/Suntec City",
+            "cards": "UOB/CITI Bank",
+            "category": "Kitchen",
+            "offer": "From 30%",
+            "dist": "4.2"
+        },
+        {
+            "href": "#",
+            "img": "img/thumb2.png",
+            "name": "Fab Food",
+            "place": "Suntec City",
+            "cards": "All",
+            "category": "Restaurant",
+            "offer": "1 Eats Free",
+            "dist": "0.3"
+        },
+        {
+            "href": "#",
+            "img": "img/thumb3.png",
+            "name": "Honest Joe",
+            "place": "Funan",
+            "cards": "Safra/Passion",
+            "category": "Electronics",
+            "offer": "Up to 50%",
+            "dist": "0.5"
+        },
+        {
+            "href": "#",
+            "img": "img/thumb4.png",
+            "name": "Everywhere Shoes",
+            "place": "Funan",
+            "cards": "AMEX",
+            "category": "Shoes & Bags",
+            "offer": "From 20%",
+            "dist": "1"
+        },
+        {
+            "href": "#",
+            "img": "img/thumb5.png",
+            "name": "Good Face",
+            "place": "313 Somerest",
+            "cards": "UOB/CITI Bank",
+            "category": "Cosmetics",
+            "offer": "From 30%",
+            "dist": "2"
+        },
+        {
+            "href": "#",
+            "img": "img/thumb6.png",
+            "name": "Hat",
+            "place": "313 Somerest",
+            "cards": "CITI Bank",
+            "category": "Fashion",
+            "offer": "From 40%",
+            "dist": "5"
+        },
+        {
+            "href": "#",
+            "img": "img/thumb7.png",
+            "name": "Dress",
+            "place": "Funan",
+            "cards": "UOB",
+            "category": "Fashion",
+            "offer": "Flat 20%",
+            "dist": "1.5"
+        },
+        {
+            "href": "#",
+            "img": "img/thumb8.png",
+            "name": "Jecket",
+            "place": "Icon",
+            "cards": "AMEX",
+            "category": "Fashion",
+            "offer": "From 10%",
+            "dist": "2.5"
+        },
+        {
+            "href": "#",
+            "img": "img/thumb10.png",
+            "name": "Jecket-L",
+            "place": "Icon",
+            "cards": "ALL",
+            "category": "Fashion",
+            "offer": "From 10%",
+            "dist": "4.5"
+        }
+    ]
+}

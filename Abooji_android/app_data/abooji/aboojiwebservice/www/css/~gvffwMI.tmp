@@ -1,0 +1,1660 @@
+
+@font-face {
+
+    font-family: 'MyriadPro-Regular_1';
+
+    src: url('./MyriadPro-Regular_1-webfont.eot');
+
+    src: url('./MyriadPro-Regular_1-webfont.eot?#iefix') format('embedded-opentype'), url('./MyriadPro-Regular_1-webfont.woff') format('woff'), url('./MyriadPro-Regular_1-webfont.ttf') format('truetype'), url('./MyriadPro-Regular_1-webfont.svg#MyriadPro-Regular_1') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@charset "utf-8";
+
+/* CSS Document */
+
+img {
+
+    max-width: 100%;
+
+    margin: 0px;
+
+    border: none;
+
+    outline: none;
+
+}
+
+.clear {
+
+    clear: both;
+
+}
+
+html,
+
+body {
+
+    margin: 0px;
+
+    padding: 0px;
+
+}
+
+body {
+
+    color: #636E7B;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    line-height: 21px;
+
+    margin: 0px;
+
+    padding: 0px;
+
+    background-color: #f4f4f4;
+
+}
+
+body.notfound,
+
+body.signin {
+
+    background: url(../img/main-bg.png) repeat-x #df6700;
+
+}
+
+body.scroll-class {
+
+    overflow: visible;
+
+}
+
+.splash-bg {
+
+    background: url(../img/main-bg-2.png) no-repeat 0px -530px;
+
+    background-size: cover;
+
+}
+
+/*section {
+	display: block;
+}*/
+
+.signinpane {
+
+    margin: 0;
+
+    width: 100%;
+
+}
+
+.splash-screen-logo {
+
+    width: 43%;
+
+    height: auto;
+
+    margin: 15% auto 0px auto;
+
+    /*position:absolute;*/
+
+    padding: 0px;
+
+}
+
+.splash-screen-logo img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+.heading-text {
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    line-height: 88px;
+
+}
+
+.top-hd-left-icon {
+
+    width: 10%;
+
+    height: auto;
+
+    margin: 0px;
+
+    padding: 0px 0 0 10px;
+
+    float: left;
+
+}
+
+.top-hd-right-icon {
+
+    width: 4%;
+
+    height: auto;
+
+    margin: 0px;
+    
+    margin-left: 0.5em;
+
+    padding: 0px 0px 0 0;
+
+    float: right;
+
+}
+
+.content-heading {
+
+    background: #f58220;
+
+    box-shadow: 0 8px 6px -6px #9f9f9f;
+
+    padding: 0px 0;
+
+    width: 100%;
+
+    display: inline-block;
+
+}
+
+.main-screen-out-div {
+
+    width: 60%;
+
+    margin: 0px auto 0px auto;
+
+    clear: both;
+
+    padding: 0px 0px 0px 0px;
+
+}
+
+.main-screen-out-div div .ui-select {
+
+    border-bottom: 1px solid #dee2e3;
+
+    padding-bottom: 11px;
+
+}
+
+.main-out {
+
+    width: 47%;
+
+    margin: 15px auto 0px auto;
+
+}
+
+.out-div {
+
+    display: inline-block;
+
+    padding: 2% 0 2% 3.3%;
+
+}
+
+.out-div img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+.select-main-box {
+
+    background: #FFF;
+
+    border: #efefef 1px solid;
+
+    width: 91.4%;
+
+    border-radius: 5px;
+
+    margin: -9px 0px 0px -1px !important;
+
+    float: left;
+
+    box-shadow: 0 6px 4px -6px #9F9F9F;
+
+}
+
+.select-hading {
+
+    color: #ecf0f1;
+
+    background: url(../img/select-bg.png) repeat;
+
+    border-bottom: #d94b00 1px solid;
+
+    font-size: 25px;
+
+    padding-left: 25px;
+
+    line-height: 56px;
+
+    box-shadow: 0 6px 4px -6px #a4b9c8;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    border-radius: 5px 5px 0 0;
+
+}
+
+.select-hading span {
+
+    color: #ecf0f1;
+
+    float: right;
+
+    padding-right: 10px;
+
+    font-size: 25px;
+
+    padding-left: 25px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+}
+
+#select-tex-right {
+
+    float: left;
+
+    width: 48%;
+
+    margin: 0 0 0 5%;
+
+}
+
+#select-tex {
+
+    float: left;
+
+    width: 44%;
+
+    margin: 0 2% 4% 0;
+
+}
+
+.library-last-td {
+
+    text-align: left;
+
+    border-bottom: #dee2e3 1px solid;
+
+    padding: 16px 0 16px 20px;
+
+    margin: 0 0 0 10px;
+
+}
+
+input[type=checkbox].css-checkbox {
+
+    position: absolute;
+
+    overflow: hidden;
+
+    clip: rect(0 0 0 0);
+
+    height: 1px;
+
+    width: 1px;
+
+    margin: -1px;
+
+    padding: 0;
+
+    border: 0;
+
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+
+    padding-left: 25px;
+
+    height: 15px;
+
+    display: inline-block;
+
+    line-height: 18px;
+
+    color: #666666;
+
+    background-repeat: no-repeat;
+
+    background-position: 0 0;
+
+    font-size: 15px;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+
+    background-position: 0 -15px;
+
+}
+
+.css-label {
+
+    background-image: url(../img/chekbox-bg.png);
+
+}
+
+.banner {
+
+    margin: 10px 0 40px 0;
+
+    box-shadow: 0 8px 6px -6px #9f9f9f;
+
+}
+
+.premium-h {
+
+    border-bottom: #dee2e3 1px solid;
+
+    font-size: 25px;
+
+    color: #f58220;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    padding-left: 25px;
+
+    line-height: 40px;
+
+}
+
+.premium-h span {
+
+    color: #666666;
+
+    font-size: 25px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+}
+
+.premium-item {
+
+    float: left;
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 80%;
+
+    border-right: #e5e5e5 1px solid;
+
+}
+
+.premium-img {
+
+    border: #e5e5e5 1px solid;
+
+    padding: 5px;
+
+    display: inline-block;
+
+    float: left;
+
+    margin: 10px 10px 10px 10px;
+
+}
+
+.premium-item-text {
+
+    font-size: 18px;
+
+    color: #666666;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    padding-top: 10px;
+
+}
+
+.premium-item-te {
+
+    color: #f58220;
+
+    font-size: 18px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    float: left;
+
+}
+
+.right-text {
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    padding-top: 50px;
+
+    font-size: 18px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    color: #666666;
+
+}
+
+.select-main-box-pro {
+
+    background: #FFF;
+
+    border: #efefef 1px solid;
+
+    width: 100%;
+
+    border-radius: 7px;
+
+    margin: 2px 0 2px 0;
+
+    float: left;
+
+    box-shadow: 0 6px 4px -6px #9F9F9F;
+
+}
+
+.winter-sale {} .winter-sale img {
+
+    width: 100%;
+
+    margin: 0px 0 10px 0;
+
+}
+
+.special-box {
+
+    width: 100%;
+
+    float: left;
+
+    border-bottom: #dee2e3 1px solid;
+
+}
+
+.near-me {
+
+    width: 80%;
+
+    float: left;
+
+    background: url(../img/near-icon.png) left center no-repeat;
+
+    padding: 0 0 0 20px;
+
+    line-height: 48px;
+
+    margin: 0 0 0 20px;
+
+    color: #666666;
+
+    font-size: 15px;
+
+    font-family: 'MyriadPro-Regular_1';
+    
+    overflow: hidden;
+        
+    text-overflow: ellipsis;
+
+}
+
+.near-tex {
+
+    float: left;
+
+    border-left: #dee2e3 1px solid;
+
+    line-height: 48px;
+
+    width: 6%;
+
+    text-align: center;
+
+    color: #666666;
+
+    font-size: 15px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+}
+
+.scan-btn {
+
+    float: right;
+
+    padding: 9px 9px 9px 0;
+
+}
+
+.select-div {
+
+    margin: 20px 0 16px 20px;
+
+    width: 22%;
+
+    float: left;
+
+}
+
+.category-h {
+
+    text-align: center;
+
+    font-size: 15px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    color: #f58220;
+
+    text-transform: uppercase;
+
+    margin: 0 0 0 0;
+
+    font-weight: 700;
+
+}
+
+.category {
+
+    border: #e5e5e5 1px solid;
+
+    width: 100%;
+
+    font-size: 15px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    color: #ffffff;
+
+    padding: 3px;
+
+    -webkit-border-radius: 4px;
+
+    -moz-border-radius: 4px;
+
+    border-radius: 4px;
+
+    -webkit-box-shadow: 0 3px 0 #dc6c0c, 0 -1px #fff inset;
+
+    -moz-box-shadow: 0 3px 0 #dc6c0c, 0 -1px #fff inset;
+
+    box-shadow: 0 3px 0 #dc6c0c, 0 -1px #dc6c0c inset;
+
+    background: #f58220;
+
+    border: none;
+
+    outline: none;
+
+}
+
+.category option {
+
+    font-size: 15px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    color: #ffffff;
+
+}
+
+.premium-item-box {
+
+    border-top: #e5e5e5 1px solid;
+
+    width: 100%;
+
+    float: left;
+
+}
+
+.div-select {
+
+    float: left;
+
+    width: 50%;
+
+}
+
+.range {
+
+    padding: 5px 0;
+
+}
+
+.premium-item-nice {
+
+    float: left;
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 80%;
+
+    border-right: #e5e5e5 1px solid;
+
+}
+
+.premium-img-nice {
+
+    border: #e5e5e5 1px solid;
+
+    padding: 5px;
+
+    display: inline-block;
+
+    float: left;
+
+    margin: 10px 10px 10px 10px;
+
+}
+
+.premium-item-text-nice {
+
+    font-size: 13px;
+
+    color: #f58220;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    padding-top: 10px;
+
+    font-weight: 600;
+
+    line-height: 30px;
+
+}
+
+.premium-item-te-nice {
+
+    font-size: 13px;
+
+    color: #666666;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    line-height: 30px;
+
+}
+
+.right-text-nice {
+
+    text-align: center;
+
+    float: right;
+
+    vertical-align: middle;
+
+    padding-top: 50px;
+
+    padding-right: 5%;
+
+    font-size: 13px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    color: #666666;
+
+    font-weight: 600;
+
+}
+
+.canter-taxt {
+
+    float: left;
+
+    padding: 0;
+    
+
+}
+
+.canter-taxt-1 {
+
+    float: right;
+
+    padding: 0;
+    
+
+}
+
+.premium-item-te-nice-1 {
+
+    text-align: right;
+
+    font-size: 11px;
+
+    color: #666666;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-weight: 600;
+
+    line-height: 30px;
+
+    padding: 10px 10px 0 0;
+
+}
+
+.navi {
+
+    width: 100%;
+
+    background: #f58220;
+
+    display: inline-block;
+
+}
+
+.nav {
+
+    position: relative;
+
+    margin-bottom: 0px;
+
+   
+}
+
+.nav ul {
+
+    padding: 0 0px 0 0;
+
+    overflow: hidden;
+
+    margin: 0px;
+    
+    height: 71px;
+    
+    background: #dc6c0c;
+
+}
+
+.nav ul li {
+
+    border-left: #dc6c0c 1px solid;
+
+    float: left;
+
+    padding: 0 0 0 0px;
+
+    list-style: none;
+
+    margin: 0px;
+
+    width: 19.9%;
+    
+    background: #dc6c0c;
+
+}
+
+.nav ul li a {
+
+    display: block;
+
+    line-height: 90px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    margin: 0px;
+
+    padding: 0px;
+
+    text-transform: uppercase;
+
+}
+
+.nav ul li a span {
+
+    display: block;
+
+    cursor: pointer;
+
+}
+
+.nav ul li a strong {
+
+    /*background-position: 50% 35px !important;*/
+
+    display: block;
+
+    font-weight: normal;
+
+}
+
+.nav ul li#m1 a strong img {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.nav ul li#m2 a strong img {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.nav ul li#m3 a strong img {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.nav ul li#m4 a strong img {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.nav ul li#m5 a strong img {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.nav ul li.act a {
+
+    background: #dc6c0c;
+
+    line-height: 90px;
+
+    color: #FFFFFF;
+
+}
+
+.nav ul li.act a strong {
+
+    /*background-position: 50% 19px !important;*/
+
+}
+
+.nav ul li.act a span {
+
+    /*background-position: 50% 97px;*/
+
+}
+
+.nav ul li a:hover {
+
+    background: #dc6c0c;
+
+    border: #d8640b 1px solid;
+
+    border-bottom: none;
+
+    -webkit-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.5);
+
+    -moz-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.5);
+
+    box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.5);
+
+    color: #FFFFFF;
+
+}
+
+.nav ul li a:hover strong {
+
+    /*background-position: 50% 19px !important;*/
+
+}
+
+.nav ul li a:hover span {
+
+    background-position: 40% 97px;
+
+}
+
+.banner-2 {
+
+    width: 100%;
+
+    margin: 15px 0 0 0;
+
+}
+
+.banner-2 img {
+
+    width: 100%;
+
+    margin: 0 0 0 0;
+
+}
+
+.favorite-h {
+
+    font-size: 25px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-weight: 700;
+
+    color: #f58220;
+
+    padding: 20px 0 20px 20px;
+
+    text-transform: uppercase;
+
+}
+
+.favorite-text {
+
+    font-size: 20px;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-weight: 700;
+
+    color: #666666;
+
+    padding: 0px 0 0px 20px;
+
+}
+
+.premium-item-box-nearest {
+
+    width: 97%;
+
+    float: left;
+
+    padding: 0px 0 0 20px;
+
+    line-height: 40px;
+
+}
+
+.premium-item-text-nearest {
+
+    font-size: 15px;
+
+    color: #f58220;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    padding-top: 0px;
+
+    font-weight: 600;
+
+    float: left;
+
+}
+
+.premium-item-nearest {
+
+    font-size: 14px;
+
+    color: #666666;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    float: left;
+
+    width: 10%;
+
+}
+
+.premium-item-ne {
+
+    font-size: 14px;
+
+    color: #666666;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    float: left;
+
+    width: 3%;
+
+}
+
+.password-icon {
+
+    text-align: center;
+
+    width: 100%;
+
+    padding: 70px 0;
+
+}
+
+.what-btn {
+
+    width: 48%;
+
+    float: left;
+
+    margin: 0 0 60px 0;
+
+}
+
+.icon {
+
+    float: right;
+
+}
+
+.what-btn-1 {
+
+    width: 48%;
+
+    float: right;
+
+}
+
+.icon-1 {
+
+    float: left;
+
+}
+
+.what-btn-box {
+
+    margin: 0 0 70px 0;
+
+    text-align: center;
+
+}
+
+.input[type='range'] {
+
+    -webkit-appearance: none;
+
+    border-radius: 5px;
+
+    background-color: #dcdcdc;
+
+    margin: 0;
+
+    vertical-align: middle;
+
+    width: 100%;
+
+}
+
+.input[type='range']::-moz-range-track {
+
+    -moz-appearance: none;
+
+    border-radius: 5px;
+
+    background-color: #fb9d54;
+
+    height: 8px;
+
+}
+
+.input[type='range']::-moz-range-thumb {
+
+    -moz-appearance: none;
+
+    border-radius: 20px;
+
+    background-color: #ebebeb;
+
+    box-shadow: inset 0 0 10px rgba(000, 000, 000, 0.2);
+
+    height: 15px;
+
+    width: 15px;
+
+}
+
+.custom-dropdown__select {
+
+    font-size: inherit;
+
+    /* inherit size from .custom-dropdown */
+
+    padding: .3em;
+
+    /* add some space*/
+
+    margin: 0;
+
+    /* remove default margins */
+
+}
+
+.custom-dropdown__select--white {
+
+    background: none repeat scroll 0 0 #F58220;
+
+    border: medium none;
+
+    border-radius: 4px;
+
+    box-shadow: 0 3px 0 #DC6C0C, 0 -1px #DC6C0C inset;
+
+    color: #FFFFFF;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-size: 15px;
+
+    outline: medium none;
+
+    width: 100%;
+
+}
+
+.custom-dropdown {
+
+    position: relative;
+
+    display: inline-block;
+
+    vertical-align: middle;
+
+    width: 100%;
+
+}
+
+.custom-dropdown__select {
+
+    /* accommodate with the pseudo elements for the dropdown arrow */
+
+    border: 0;
+
+    border-radius: 3px;
+
+    -webkit-appearance: none;
+
+    -moz-appearance: none;
+
+    appearance: none;
+
+}
+
+.custom-dropdown::before,
+
+.custom-dropdown::after {
+
+    content: "";
+
+    position: absolute;
+
+    pointer-events: none;
+
+}
+
+.custom-dropdown::after {
+
+    /*  Custom dropdown arrow */
+
+    content: "\25BC";
+
+    height: 1em;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    right: .2em;
+
+    top: 50%;
+
+    margin-top: -.4em;
+
+}
+
+.custom-dropdown::before {
+
+    /*  Custom dropdown arrow cover */
+
+    width: 2em;
+
+    right: 0;
+
+    top: 0;
+
+    bottom: 0;
+
+    border-radius: 0 3px 3px 0;
+
+}
+
+.custom-dropdown__select[disabled] {
+
+    color: #fff;
+
+}
+
+.custom-dropdown.custom-dropdown--disabled::after {
+
+    color: #fff;
+
+}
+
+/* White dropdown style */
+
+.custom-dropdown--white::before {
+
+    bottom: .1em;
+
+    background-color: #f58220;
+
+    border-left: 1px solid #dc6c0c;
+
+}
+
+.custom-dropdown--white::after {
+
+    color: #fff;
+
+}
+
+/* FF only temp fix */
+
+.custom-dropdown--large .custom-dropdown__select {
+
+    padding-right: 1.3em
+
+}
+
+.custom-dropdown--small .custom-dropdown__select {
+
+    padding-right: .5em
+
+}
+
+#toggle-view {
+
+    list-style: none;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-size: 11px;
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+}
+
+
+#toggle-view li {
+
+    margin: 0px;
+
+    position: relative;
+
+    padding: 0px 0;
+
+    cursor: pointer;
+
+    line-height: 50px;
+    
+    display: block;
+
+}
+
+.shp_list_li {
+
+    margin: 0px;
+
+    position: relative;
+
+    padding: 0px 0;
+
+    cursor: pointer;
+
+    line-height: 50px;
+    
+    display: block;
+
+}
+
+#toggle-view h3 {
+
+    margin: 0;
+
+    color: #f58220;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-size: 18px;
+
+    border-bottom: 1px solid #dee2e3;
+
+    padding: 0 0 0 20px;
+    
+    width: 90%;
+    
+    display: -webkit-inline-box;
+
+}
+
+.shp_list_h3 {
+
+    margin: 0;
+
+    color: #f58220;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-size: 18px;
+
+    border-bottom: 1px solid #dee2e3;
+
+    padding: 0 0 0 20px;
+    
+}
+
+#toggle-view span {
+
+    position: absolute;
+
+    right: 5px;
+
+    top: 10px;
+
+    color: #ccc;
+
+    font-size: 13px;
+
+}
+
+.shp_list_span {
+
+    position: absolute;
+
+    right: 5px;
+
+    top: 10px;
+
+    color: #ccc;
+
+    font-size: 13px;
+
+}
+
+#toggle-view div p {
+
+    margin: 5px 2%;
+
+    line-height: 20px;
+
+    display: none;
+
+    color: #666666;
+
+    font-size: 14px;
+
+}
+
+.shp_list_p {
+
+    margin: 5px 2%;
+
+    line-height: 20px;
+
+    display: none;
+
+    color: #666666;
+
+    font-size: 14px;
+
+}
+
+
+.toggle-view {
+
+    margin: 10px 0 80px 20px;
+
+}
+
+.toggle-view span {
+
+    width: auto;
+
+    color: #f58220;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-size: 18px;
+
+    padding: 0;
+
+    font-weight: 600;
+
+}
+
+.input-viw {
+
+    background-color: #e8e9ec;
+
+    height: 34px;
+
+    width: 80%;
+
+    line-height: 34px;
+
+    color: #666666;
+
+    border: #d8dadf 1px solid;
+
+    border-radius: 25px;
+
+    font-family: "Myriad Pro";
+
+    font-size: 14px;
+
+    padding: 0 5px;
+
+    margin-left: 10px;
+
+}
+
+.select-main-search {
+
+    background: #FFF;
+
+    border: #efefef 1px solid;
+
+    width: 100%;
+
+    border-radius: 7px;
+
+    margin: 20px 0 50px 0;
+
+    float: left;
+
+    box-shadow: 0 6px 4px -6px #9F9F9F;
+
+}
+
+.select_lbl {
+
+    margin: 0;
+
+    color: #f58220;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-size: 18px;
+
+    padding: 0 0 0 20px;
+    
+
+}
+
+.select_lbl h3{-webkit-margin-after: 0px;}
+
+.container {
+
+    min-height: 100%;
+
+    position: relative;
+
+}
+
+.overlay-bg {
+
+    display: block;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    height: 100%;
+
+    width: 100%;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    /* high z-index */
+
+    background: #565454;
+
+    /* fallback */
+
+    background: rgba(0, 0, 0, 0.75);
+
+}
+
+.overlay-content {
+
+    padding: 0;
+
+    width: 50%;
+
+    position: relative;
+
+    top: 25%;
+
+    /*left: 50%;*/
+
+    margin: 0px auto;
+
+    /* add negative left margin for half the width to center the div */
+
+    cursor: default;
+
+}
+
+.pop-box-bg-div {
+
+    background: #fff;
+
+    padding: 26px 0 26px 42px;
+
+    position: relative;
+
+    border-bottom: #d8c5c5 1px solid;
+
+    border-radius: 5px;
+
+    z-index: 9999;
+
+}
+
+.pop-box-bg-div strong {
+
+    color: #666666;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    line-height: 40px;
+
+}
+
+.pop-box-bg-div h2 {
+
+    color: #666666;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-size: 20px;
+
+    font-weight: normal;
+
+}
+
+.pop-box-bg-div ul {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.pop-box-bg-div li {
+
+    margin: 0;
+
+    padding: 0 0 0 20px;
+
+    color: #666666;
+
+    background: url(../img/model-icon.png) left 15px no-repeat;
+
+    font-family: 'MyriadPro-Regular_1';
+
+    font-size: 20px;
+
+    line-height: 40px;
+
+    font-weight: normal;
+
+    list-style: none;
+
+    text-decoration: none;
+
+}

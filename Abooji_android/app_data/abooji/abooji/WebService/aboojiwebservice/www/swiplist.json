@@ -1,0 +1,84 @@
+{
+    "loc": [
+        {
+            "href": "#",
+            "name": "Near Me",
+            "count": "51"
+        },
+        {
+            "href": "#",
+            "name": "Home",
+            "count": "31"
+        },
+        {
+            "href": "#",
+            "name": "Work",
+            "count": "91"
+        },
+        {
+            "href": "#",
+            "name": "Mums",
+            "count": "101"
+        },
+        {
+            "href": "#",
+            "name": "Taka",
+            "count": "21"
+        }
+],
+    "cat": [
+        {
+            "href": "#",
+            "name": "Grocery",
+            "count": "5"
+        },
+        {
+            "href": "#",
+            "name": "Shoes",
+            "count": "3"
+        },
+        {
+            "href": "#",
+            "name": "Electronics",
+            "count": "11"
+        },
+        {
+            "href": "#",
+            "name": "Shell",
+            "count": "3"
+        },
+        {
+            "href": "#",
+            "name": "Petrol",
+            "count": "6"
+        }
+],
+    "card": [
+        {
+            "href": "#",
+            "name": "Card A",
+            "count": "101 Offers"
+        },
+        {
+            "href": "#",
+            "name": "Card B",
+            "count": "99 Offers"
+        },
+        {
+            "href": "#",
+            "name": "Passion",
+            "count": "501 Offers"
+        },
+        {
+            "href": "#",
+            "name": "Student",
+            "count": "999 Offers"
+        },
+        {
+            "href": "#",
+            "name": "Abooji",
+            "count": "1001 Offers"
+        }
+]
+
+}

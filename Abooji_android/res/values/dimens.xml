@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="slidingmenu_offset">80dp</dimen>
+    <dimen name="activity_padding">10dp</dimen>
+    <dimen name="activity_padding_for_addchild">22dp</dimen>
+    <dimen name="actionbar_title_size">19sp</dimen>
+    <dimen name="tabbar_padding_bottom">50dp</dimen>
+
+    <!-- text size -->
+    <dimen name="h_0">28sp</dimen>
+    <dimen name="h_1">24sp</dimen>
+    <dimen name="h_2">22sp</dimen>
+    <dimen name="h_3">20sp</dimen>
+    <dimen name="h_4">18sp</dimen>
+    <dimen name="h_5">16sp</dimen>
+    <dimen name="h_6">14sp</dimen>
+    <dimen name="h_7">11sp</dimen>
+    <dimen name="h_8">7sp</dimen>
+    <dimen name="h_9">9sp</dimen>
+
+    <!-- margin -->
+    <dimen name="margin_80">80dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_1">1dp</dimen>
+
+</resources>

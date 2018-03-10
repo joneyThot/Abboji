@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding" >
+
+            <com.android.abooji.view.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/personal"
+                android:textSize="@dimen/h_1"
+                app:customFont="@string/font_bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="vertical" >
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_sex"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/h_6" />
+
+                <Spinner
+                    android:id="@+id/activity_personal_sex_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:entries="@array/gender_arrays"
+                    android:padding="@dimen/activity_padding"
+                    android:prompt="@string/personal_gender_prompt"
+                    android:textSize="@dimen/h_5" />
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_age_range"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/h_6"
+                    app:customFont="@string/font_normal" />
+
+                <Spinner
+                    android:id="@+id/activity_personal_age_range_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:entries="@array/age_arrays"
+                    android:padding="@dimen/activity_padding"
+                    android:prompt="@string/personal_age_prompt"
+                    android:textSize="@dimen/h_5" />
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_marital_status"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/h_6"
+                    app:customFont="@string/font_normal" />
+
+                <Spinner
+                    android:id="@+id/activity_personal_marital_status_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:entries="@array/marital_arrays"
+                    android:padding="@dimen/activity_padding"
+                    android:prompt="@string/personal_Marital_prompt"
+                    android:textSize="@dimen/h_5" />
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_children"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/h_6"
+                    app:customFont="@string/font_normal" />
+
+                <RadioGroup
+                    android:id="@+id/activity_personal_children_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <RadioButton
+                        android:id="@+id/activity_personal_children_Yes_radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg"
+                        android:checked="true"
+                        android:padding="@dimen/activity_padding"
+                        android:text="Yes" >
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/activity_personal_children_No_radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg"
+                        android:padding="@dimen/activity_padding"
+                        android:text="No" >
+                    </RadioButton>
+                </RadioGroup>
+
+                <com.android.abooji.view.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_children_age"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/h_6"
+                    app:customFont="@string/font_normal" />
+
+                <com.android.abooji.view.TextViewPlus
+                    android:id="@+id/activity_personal_children_age_edittxt"
+                    style="@style/WhiteBackEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:padding="@dimen/activity_padding"
+                    android:textSize="@dimen/h_5" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/input_bg" />
+
+                <com.android.abooji.view.TextViewPlus
+                    android:id="@+id/activity_personal_next_btn"
+                    style="@style/ButtonTextStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_next" />
+            </LinearLayout>
+
+            <com.android.abooji.view.TextViewPlus
+                android:id="@+id/activity_personal_save_btn"
+                style="@style/ButtonTextStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:text="@string/personal_save" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

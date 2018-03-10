@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.android.abooji.view.TextViewPlus
+            android:id="@+id/todaystitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:padding="@dimen/activity_padding"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/h_4"
+            app:customFont="@string/font_bold" />
+
+        <com.android.abooji.view.TextViewPlus
+            android:id="@+id/todaystitlevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:padding="@dimen/activity_padding"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/h_4"
+            app:customFont="@string/font_bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/titleLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:orientation="horizontal" >
+
+        <com.android.abooji.view.TextViewPlus
+            android:id="@+id/titlename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:background="@drawable/back"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="@dimen/h_6"
+            app:customFont="@string/font_normal" />
+
+        <com.android.abooji.view.TextViewPlus
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.1"
+            android:background="@drawable/back"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Offers"
+            android:textSize="@dimen/h_9"
+            app:customFont="@string/font_normal" />
+
+        <com.android.abooji.view.TextViewPlus
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.1"
+            android:background="@drawable/back"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Todays only"
+            android:textSize="@dimen/h_9"
+            app:customFont="@string/font_normal" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/expandablelist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/listing_bg" />
+
+</LinearLayout>

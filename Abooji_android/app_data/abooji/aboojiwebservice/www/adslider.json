@@ -1,0 +1,17 @@
+{
+        "ad": [
+        {
+            "src": "img/ad.png",
+            "changepage": "$.mobile.changePage( '#advertpage', { transition: 'flow'} );"
+        },
+        {
+            "src": "img/big/1.png",
+            "changepage": "$.mobile.changePage( '#advertpage', { transition: 'flow'} );"
+        },
+        {
+            "src": "img/big/2.png",
+            "changepage": "$.mobile.changePage( '#advertpage', { transition: 'flow'} );"
+        }
+]
+    
+}

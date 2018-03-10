@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Facebook -->
+    <string name="fb_id">1435217070125595</string>
+    <string name="app_name">Abooji</string>
+    <string name="try_again">Try again!</string>
+    <string name="font_normal">Asap-Regular.otf</string>
+    <string name="font_bold">Asap-Bold.otf</string>
+    <string name="connection">Internet Connection Not Available</string>
+    <string name="loading">Loading...</string>
+    <string name="invalid_login">Invalid email or password.</string>
+    <string name="provide_field">Provide mandatory field.</string>
+
+    <!-- Login Board Activity -->
+    <string name="login_dash_content">\"Shopping has never been more FUN!\"</string>
+
+    <!-- Validation Message -->
+    <string name="alert">Alert</string>
+
+    <!-- Register Screen -->
+    <string name="register_useremail">User Email:</string>
+    <string name="register_password">Password:</string>
+    <string name="register_confirmpassword">Confirm Password:</string>
+    <string name="register_cancel">Cancel</string>
+    <string name="register_submit">Submit</string>
+    <string name="register_enter_email">Please Enter Email!</string>
+    <string name="register_invalid_email">Invalid Email!</string>
+    <string name="register_enter_password">Please Enter Password!</string>
+    <string name="register_enter_confirmpassword">Please Enter Confirm Password!</string>
+    <string name="register_password_notmatch">Password Not Match!</string>
+
+    <!-- Forgot Password -->
+    <string name="forgotpass_txt">Forgot Password</string>
+    <string name="forgotpass_hinttxt">Enter Email Address</string>
+    <string name="forgotpass_emailmypassword">Email My Password</string>
+
+    <!-- Login -->
+    <string name="login">Login</string>
+    <string name="login_email">Email:</string>
+    <string name="login_password">Password:</string>
+    <string name="login_cancel">Cancel</string>
+    <string name="login_forgot_password">Forgot Password</string>
+
+    <!-- Personal -->
+    <string name="personal">Personal</string>
+    <string name="personal_sex">Sex:</string>
+    <string name="personal_age_range">Age Range:</string>
+    <string name="personal_marital_status">Marital Status:</string>
+    <string name="personal_children">Children:</string>
+    <string name="personal_children_age">Children Age:</string>
+    <string name="personal_next">Next</string>
+    <string name="personal_save">Save</string>
+     <string name="personal_gender_prompt">Gender</string>
+    <string name="personal_fill_gender">Please Fill Gender</string>
+    <string name="personal_fill_age_range">Please Fill Age Range</string>
+    <string name="personal_fill_marital_status">Please Fill Marital Status</string>
+    <string name="personal_select_children">Please Select Children Age</string>
+   
+    <string-array name="gender_arrays">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string name="personal_age_prompt">Age Range</string>
+
+    <string-array name="age_arrays">
+        <item>Age</item>
+        <item>12 or less</item>
+        <item>13"-"16</item>
+        <item>17"-"25</item>
+        <item>26"-"35</item>
+        <item>36"-"45</item>
+        <item>46"-"55</item>
+        <item>56"-"65</item>
+        <item>66 or above</item>
+    </string-array>
+
+    <string name="personal_Marital_prompt">Marital Status</string>
+
+    <string-array name="marital_arrays">
+        <item>Marital</item>
+        <item>Single</item>
+        <item>Married</item>
+    </string-array>
+
+    <!-- Cards -->
+    <string name="cards">Cards</string>
+    <string name="cards_string">Add cards to receive only offer made for the card selected.</string>
+    <string name="cards_txt">Card:</string>
+    <string name="cards_type">Type:</string>
+    <string name="cards_category_preference">Category Preference:</string>
+    <string name="cards_add_cards">Add Cards</string>
+    <string name="cards_total_cards_added">Total cards added:</string>
+    <string name="cards_prev">Previous</string>
+    <string name="cards_next">Next</string>
+    <string name="cards_save">Save</string>
+    <string name="cards_category_prompt">Card Category</string>
+    <string name="cards_fill_category_preference">Please Fill Category_preference</string>
+
+    <string-array name="cards_category_arrays">
+        <item>Choose Category</item>
+        <item>Credit</item>
+        <item>Debit</item>
+        <item>Discount</item>
+        <item>Member Pass</item>
+        <item>Status Pass</item>
+    </string-array>
+
+    <string name="cards_type_prompt">Card Type</string>
+
+    <string-array name="cards_type_arrays">
+        <item>Choose Type</item>
+        <item>Visa</item>
+        <item>Mastercard</item>
+        <item>Diners</item>
+        <item>JCB</item>
+        <item>AMEX</item>
+        <item>SAFRA</item>
+        <item>PASSIONCARD</item>
+    </string-array>
+
+    <!-- Category -->
+    <string name="category">Category</string>
+    <string name="category_string">Select only product category you wished to be notified for.</string>
+    <string name="category_preference">Category Preference:</string>
+    <string name="category_prev">Previous</string>
+    <string name="category_next">Next</string>
+    <string name="category_save">Save</string>
+    <string name="category_fill_cat_preference">Please fill Category Preference</string>
+
+    <!-- Location -->
+    <string name="location">Add Location</string>
+    <string name="location_string">Add your favorite locations to receive offers around those areas.</string>
+    <string name="location_enable_current_gps_location">Enable Current GPS Location?</string>
+    <string name="location_toogle_yes">Yes</string>
+    <string name="location_toogle_No">No</string>
+    <string name="location_how_to_add_location">How To Add Location:</string>
+    <string name="location_toogle_map">Map</string>
+    <string name="location_toogle_gps">GPS</string>
+    <string name="location_from_gps">Location From GPS</string>
+    <string name="location_open_map">Open Map</string>
+    <string name="location_name_of_location">Name Of Location:</string>
+    <string name="location_txt">Location:</string>
+    <string name="location_add">Add</string>
+    <string name="location_prev">Previous</string>
+    <string name="location_next">Next</string>
+    <string name="location_save">Save</string>
+
+    <!-- Notification -->
+    <string name="notification">Notification Alert</string>
+    <string name="notification_string">Select timeslots you want to receive time-based offers.</string>
+    <string name="notification_alert">Alert:</string>
+    <string name="notification_alert_timings">Alert Timings:</string>
+    <string name="notification_prev">Previous</string>
+    <string name="notification_next">Next</string>
+    <string name="notification_by_clicking_txt">By clicking "Save" and using this App, you agree to the <u>UserAgreement</u> and <u>Privacy Policy.</u></string>
+    <string name="notification_prompt">Gender</string>
+    <string name="notification_fill_alert">Please Fill Alert</string>
+    <string name="notification_fill_alert_timing">Please Fill Alert Timings</string>
+
+    <string-array name="notification_arrays">
+        <item>On</item>
+        <item>Off</item>
+        <item>As Per Category</item>
+    </string-array>
+    
+
+    <!-- Start Here Screen -->
+    <string name="starthere_txt">Start Here!</string>
+    <string name="starthere_setprofile_txt">Set Up your profiles for the best shopping experience.</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_txt">PROFILE</string>
+    <string name="profile_userprofile">User Profile</string>
+    <string name="profile_cards">Cards</string>
+    <string name="profile_categorytxt">Category</string>
+    <string name="profile_location">Location</string>
+    <string name="profile_notification">Notification</string>
+
+    <!-- Header Top -->
+    <string name="headet_title">Title</string>
+
+    <!-- Menu -->
+    <string name="menu_title">Menu</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_barcode">Barcode</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_edit_profile">Edit Profile</string>
+    <string name="menu_edit_cards">Edit Cards</string>
+    <string name="menu_edit_location">Edit Locations</string>
+    <string name="menu_edit_shoppinglist">Edit Shopping Lists</string>
+    <string name="menu_edit_category">Edit Category</string>
+    <string name="menu_edit_notificatin">Edit Notifications</string>
+    <string name="menu_change_password">Change Password</string>
+    <string name="menu_help">Help</string>
+
+    <!-- Change Password -->
+    <string name="changepassword_title">Change Password</string>
+    <string name="changepassword_oldpassword">Old Password:</string>
+    <string name="changepassword_newpassword">New Password:</string>
+    <string name="changepassword_confirmnewpassword">Confirm New Password:</string>
+    <string name="changepassword_cancel">Cancel</string>
+    <string name="changepassword_submit">Submit</string>
+
+    <!-- Search screen -->
+    <string name="search_title">SEARCH</string>
+    <string name="search_keywords">Keywords:</string>
+    <string name="search_category">Category:</string>
+    <string name="search_card">Card:</string>
+    <string name="search_location">Location:</string>
+    <string name="search_reset">Reset</string>
+    <string name="search_search">Search</string>
+
+    <!-- Shopping List -->
+    <string name="shoppinglist">SHOPPING LIST</string>
+    <string name="shoppinglist_editlist">Edit List</string>
+    <string name="shoppinglist_shareshopping">Share Shopping</string>
+    <string name="shoppinglist_addnewlist">Add New List</string>
+    <string name="shoppinglist_string">Shopping List \n 1.Create a shopping list to plan your trip or share with friends.
+        											 \n 2."Add new List" to start a new list.
+        											 \n 3.To add selected items,touch and hold the item and choose the shopping list to add to.
+        											 \n 4.Tap to see items in list.
+        											 \n 5."Edit List" to delete list,delete items or share list.
+        											 \n 6.In Edit List touch and hold to send list to friend.(Select friends to send list to when emails list appears)</string>
+
+    <!-- Edit Shopping List -->
+    <string name="edit_shopping_list">EDIT SHOPPING LIST</string>
+    <string name="edit_shopping_list1">List1</string>
+    <string name="edit_shopping_list2">List2</string>
+    <string name="edit_shopping_list_date">Date</string>
+
+    <!-- Email Address -->
+    <string name="email_address">Email Address</string>
+    <string name="email_address_friends">Friends Email</string>
+    <string name="email_address_text">Add Emails to share and receive Shopping List with friends Separated by(,)</string>
+    <string name="email_address_save">Save</string>
+
+    <!-- add New Shopping List -->
+    <string name="add_new_shopping_list">ADD NEW SHOPPING LIST</string>
+    <string name="add_new_shopping_list_name">SHOPPING LIST NAME</string>
+    <string name="add_new_shopping_list_add">Add List</string>
+
+    <!-- Title Text -->
+    <string name="title_profiletext">PROFILE</string>
+    <string name="title_searchtxt">SEARCH</string>
+    <string name="title_locationtext">LOCATION</string>
+    <string name="title_shoppinglisttext">SHOPPING LIST</string>
+    <string name="title_shoppingsharetext">EMAIL ADDRESS</string>
+    <string name="title_advertstext">DETAILS</string>
+    <string name="title_shoppingeditext">EDIT SHOPPING LIST</string>
+    <string name="title_shoppingaddext">ADD NEW SHOPPING LIST</string>
+    <string name="title_currentlocationtext">CURRENT LOCATION</string>
+    <string name="title_editprofiletext">EDIT PROFILE</string>
+    <string name="title_editcardtext">EDIT CARDS</string>
+    <string name="title_editshoppinglisttext">EDIT SHOPPING LIST</string>
+    <string name="title_editcategorytext">EDIT CATEGORY</string>
+    <string name="title_editnotificationtext">EDIT NOTIFICATION</string>
+    <string name="title_editlocationtext">EDIT LOCATION</string>
+    <string name="title_changepasswordtext">CHANGE PASSWORD</string>
+    <string name="title_helptext">HELP</string>
+    <string name="title_todaystext">TODAYS SPECIAL</string>
+    <string name="title_searchdetails">SEARCH DETAILS</string>
+
+    <!-- Help -->
+    <string name="help_text">HELP</string>
+    <string name="help_text1">Shop Abooji.</string>
+    <string name="help_text2">Help Text</string>
+    
+    
+    <!-- Todays Special -->
+     <string name="todays_spceial_by_location">Today\'s Special by Location</string>
+     <string name="todays_spceial_by_category">Today\'s Special by Category</string>
+     <string name="todays_spceial_by_card">Today\'s Special by card</string>
+     <string name="todays_spceial_shopping_list">Shopping List</string>
+    
+
+    <!-- edit Location -->
+    <string name="edit_location">EDIT LOCATION</string>
+    <string name="edit_location_enable">Enable Curent GPS Location?</string>
+    <string name="edit_location_add">Add Location</string>
+    <string name="edit_location_current">Current Location</string>
+    <string name="edit_location_name">Enter Location Name</string>
+
+    <!-- edit card -->
+    <string name="edit_card">Cards</string>
+    <string name="edit_card_add">Add Cards</string>
+
+</resources>

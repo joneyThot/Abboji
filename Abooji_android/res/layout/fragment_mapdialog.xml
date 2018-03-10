@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.abooji"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_padding_for_addchild" >
+
+    <com.android.abooji.view.TextViewPlus
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_location_name"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/h_6"
+        app:customFont="@string/font_bold" />
+
+    <EditText
+        android:id="@+id/currentlocation_mapdialogedttxt"
+        style="@style/WhiteBackEditTextStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:hint="@string/edit_location_name"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:textCursorDrawable="@drawable/cursor_color" >
+    </EditText>
+
+    <com.android.abooji.view.TextViewPlus
+        android:id="@+id/location_add_btn"
+        style="@style/ButtonTextStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@android:color/black"
+        android:padding="@dimen/margin_5"
+        android:text="@string/edit_location_add"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/h_7"
+        app:customFont="@string/font_bold" />
+
+</LinearLayout>

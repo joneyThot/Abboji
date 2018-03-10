@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/advertsViewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center|center_vertical"
+        android:layout_weight="0.25" />
+
+    <com.android.abooji.view.CirclePageIndicator
+        android:id="@+id/advertsViewPagerIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/common_signin_btn_light_text_disabled"
+        android:padding="5dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/todaysViewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center|center_vertical"
+        android:layout_weight="0.5"
+        android:padding="5dp" />
+
+    <com.android.abooji.view.CirclePageIndicator
+        android:id="@+id/todaysViewPagerIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/common_signin_btn_light_text_disabled"
+        android:padding="5dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/primiumViewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_weight="0.25" />
+
+    <com.android.abooji.view.CirclePageIndicator
+        android:id="@+id/primuumViewPagerIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/common_signin_btn_light_text_disabled"
+        android:padding="5dp" />
+
+</LinearLayout>
